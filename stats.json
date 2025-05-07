@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "name": "Lewandowski",
+        "team": "Barcelona",
+        "goles": 2,
+        "asistencias": 0,
+        "paradas": 0,
+        "penaltisParados": 0,
+        "despejes": 3,
+        "minutosJugados": 90,
+        "porteriaCero": false,
+        "tarjetasAmarillas": 0,
+        "tarjetasRojas": 0,
+        "ganoPartido": true
+    },
+    {
+        "id": 1,
+        "name": "Pedri",
+        "team": "Barcelona",
+        "goles": 3,
+        "asistencias": 2,
+        "paradas": 1,
+        "penaltisParados": 1,
+        "despejes": 8,
+        "minutosJugados": 60,
+        "porteriaCero": true,
+        "tarjetasAmarillas": 2,
+        "tarjetasRojas": 0,
+        "ganoPartido": true
+    },
+    {
+        "id": 2,
+        "name": "Bellingham",
+        "team": "Real Madrid",
+        "goles": 3,
+        "asistencias": 0,
+        "paradas": 3,
+        "penaltisParados": 1,
+        "despejes": 8,
+        "minutosJugados": 10,
+        "porteriaCero": true,
+        "tarjetasAmarillas": 0,
+        "tarjetasRojas": 1,
+        "ganoPartido": false
+    },
+    {
+        "id": 3,
+        "name": "Vinicius",
+        "team": "Real Madrid",
+        "goles": 0,
+        "asistencias": 1,
+        "paradas": 2,
+        "penaltisParados": 1,
+        "despejes": 7,
+        "minutosJugados": 90,
+        "porteriaCero": false,
+        "tarjetasAmarillas": 0,
+        "tarjetasRojas": 1,
+        "ganoPartido": false
+    }
+]

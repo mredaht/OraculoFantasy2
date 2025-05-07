@@ -1,0 +1,526 @@
+[
+    {
+        "name": "Lewandowski",
+        "team": "Barcelona"
+    },
+    {
+        "name": "Pedri",
+        "team": "Barcelona"
+    },
+    {
+        "name": "Gavi",
+        "team": "Barcelona"
+    },
+    {
+        "name": "Ter Stegen",
+        "team": "Barcelona"
+    },
+    {
+        "name": "De Jong",
+        "team": "Barcelona"
+    },
+    {
+        "name": "Araujo",
+        "team": "Barcelona"
+    },
+    {
+        "name": "Raphinha",
+        "team": "Barcelona"
+    },
+    {
+        "name": "Cubarsi",
+        "team": "Barcelona"
+    },
+    {
+        "name": "Kounde",
+        "team": "Barcelona"
+    },
+    {
+        "name": "Lamine Yamal",
+        "team": "Barcelona"
+    },
+    {
+        "name": "Balde",
+        "team": "Barcelona"
+    },
+    {
+        "name": "Bellingham",
+        "team": "Real Madrid"
+    },
+    {
+        "name": "Vinicius",
+        "team": "Real Madrid"
+    },
+    {
+        "name": "Rodrygo",
+        "team": "Real Madrid"
+    },
+    {
+        "name": "Mbappe",
+        "team": "Real Madrid"
+    },
+    {
+        "name": "Modric",
+        "team": "Real Madrid"
+    },
+    {
+        "name": "Courtois",
+        "team": "Real Madrid"
+    },
+    {
+        "name": "Tchouameni",
+        "team": "Real Madrid"
+    },
+    {
+        "name": "Rudiger",
+        "team": "Real Madrid"
+    },
+    {
+        "name": "Valverde",
+        "team": "Real Madrid"
+    },
+    {
+        "name": "Mendy",
+        "team": "Real Madrid"
+    },
+    {
+        "name": "Alaba",
+        "team": "Real Madrid"
+    },
+    {
+        "name": "Griezmann",
+        "team": "Atletico Madrid"
+    },
+    {
+        "name": "Julian Alvarez",
+        "team": "Atletico Madrid"
+    },
+    {
+        "name": "Barrios",
+        "team": "Atletico Madrid"
+    },
+    {
+        "name": "Oblak",
+        "team": "Atletico Madrid"
+    },
+    {
+        "name": "Lenglet",
+        "team": "Atletico Madrid"
+    },
+    {
+        "name": "Gimenez",
+        "team": "Atletico Madrid"
+    },
+    {
+        "name": "Llorente",
+        "team": "Atletico Madrid"
+    },
+    {
+        "name": "De paul",
+        "team": "Atletico Madrid"
+    },
+    {
+        "name": "Giuliano",
+        "team": "Atletico Madrid"
+    },
+    {
+        "name": "Samuel Lino",
+        "team": "Atletico Madrid"
+    },
+    {
+        "name": "Le Normand",
+        "team": "Atletico Madrid"
+    },
+    {
+        "name": "Nico Williams",
+        "team": "Athletic Bilbao"
+    },
+    {
+        "name": "Unai Simon",
+        "team": "Athletic Bilbao"
+    },
+    {
+        "name": "Vivian",
+        "team": "Athletic Bilbao"
+    },
+    {
+        "name": "Yuri",
+        "team": "Athletic Bilbao"
+    },
+    {
+        "name": "Inaki Williams",
+        "team": "Athletic Bilbao"
+    },
+    {
+        "name": "Sancet",
+        "team": "Athletic Bilbao"
+    },
+    {
+        "name": "Gueye",
+        "team": "VillaReal"
+    },
+    {
+        "name": "Diego Conde",
+        "team": "VillaReal"
+    },
+    {
+        "name": "Sergi Cardona",
+        "team": "VillaReal"
+    },
+    {
+        "name": "Foyth",
+        "team": "VillaReal"
+    },
+    {
+        "name": "Alex Baena",
+        "team": "VillaReal"
+    },
+    {
+        "name": "Ayoze Perez",
+        "team": "VillaReal"
+    },
+    {
+        "name": "Batalla",
+        "team": "Rayo Vallecano"
+    },
+    {
+        "name": "Ratiu",
+        "team": "Rayo Vallecano"
+    },
+    {
+        "name": "Isi Palazon",
+        "team": "Rayo Vallecano"
+    },
+    {
+        "name": "Lejeune",
+        "team": "Rayo Vallecano"
+    },
+    {
+        "name": "De Frutos",
+        "team": "Rayo Vallecano"
+    },
+    {
+        "name": "Adrian",
+        "team": "Betis"
+    },
+    {
+        "name": "Llorente",
+        "team": "Betis"
+    },
+    {
+        "name": "Isco",
+        "team": "Betis"
+    },
+    {
+        "name": "Anthony",
+        "team": "Betis"
+    },
+    {
+        "name": "Jesus Rodriguez",
+        "team": "Betis"
+    },
+    {
+        "name": "Greif",
+        "team": "Mallorca"
+    },
+    {
+        "name": "Maffeo",
+        "team": "Mallorca"
+    },
+    {
+        "name": "Mojica",
+        "team": "Mallorca"
+    },
+    {
+        "name": "Dani Rodriguez",
+        "team": "Mallorca"
+    },
+    {
+        "name": "Muriqi",
+        "team": "Mallorca"
+    },
+    {
+        "name": "Darder",
+        "team": "Mallorca"
+    },
+    {
+        "name": "Remiro",
+        "team": "Real Sociedad"
+    },
+    {
+        "name": "Aguerd",
+        "team": "Real Sociedad"
+    },
+    {
+        "name": "Sucic",
+        "team": "Real Sociedad"
+    },
+    {
+        "name": "Zubimendi",
+        "team": "Real Sociedad"
+    },
+    {
+        "name": "Sergio Gomez",
+        "team": "Real Sociedad"
+    },
+    {
+        "name": "Oyarzabal",
+        "team": "Real Sociedad"
+    },
+    {
+        "name": "Kubo",
+        "team": "Real Sociedad"
+    },
+    {
+        "name": "Guaita",
+        "team": "Celta"
+    },
+    {
+        "name": "Starfelt",
+        "team": "Celta"
+    },
+    {
+        "name": "Marcos Alonso",
+        "team": "Celta"
+    },
+    {
+        "name": "Mingueza",
+        "team": "Celta"
+    },
+    {
+        "name": "Aspas",
+        "team": "Celta"
+    },
+    {
+        "name": "Nyland",
+        "team": "Sevilla"
+    },
+    {
+        "name": "Saul",
+        "team": "Sevilla"
+    },
+    {
+        "name": "Bade",
+        "team": "Sevilla"
+    },
+    {
+        "name": "Lukebakio",
+        "team": "Sevilla"
+    },
+    {
+        "name": "Ruben Vargas",
+        "team": "Sevilla"
+    },
+    {
+        "name": "Isaac",
+        "team": "Sevilla"
+    },
+    {
+        "name": "Gazzaniga",
+        "team": "Girona"
+    },
+    {
+        "name": "Miguel Gutierrez",
+        "team": "Girona"
+    },
+    {
+        "name": "Blind",
+        "team": "Girona"
+    },
+    {
+        "name": "Tsygankov",
+        "team": "Girona"
+    },
+    {
+        "name": "Bryan Gil",
+        "team": "Girona"
+    },
+    {
+        "name": "Danjuma",
+        "team": "Girona"
+    },
+    {
+        "name": "Sergio Herrera",
+        "team": "Osasuna"
+    },
+    {
+        "name": "Catena",
+        "team": "Osasuna"
+    },
+    {
+        "name": "Bryan",
+        "team": "Osasuna"
+    },
+    {
+        "name": "Budimir",
+        "team": "Osasuna"
+    },
+    {
+        "name": "Ruben Garcia",
+        "team": "Osasuna"
+    },
+    {
+        "name": "Aimar Oroz",
+        "team": "Osasuna"
+    },
+    {
+        "name": "David Soria",
+        "team": "Getafe"
+    },
+    {
+        "name": "Alderete",
+        "team": "Getafe"
+    },
+    {
+        "name": "Djene",
+        "team": "Getafe"
+    },
+    {
+        "name": "Arrambari",
+        "team": "Getafe"
+    },
+    {
+        "name": "Mayoral",
+        "team": "Getafe"
+    },
+    {
+        "name": "Terrats",
+        "team": "Getafe"
+    },
+    {
+        "name": "Joan Garcia",
+        "team": "Espanyol"
+    },
+    {
+        "name": "Omar El Hilali",
+        "team": "Espanyol"
+    },
+    {
+        "name": "Kumbulla",
+        "team": "Espanyol"
+    },
+    {
+        "name": "Jofre",
+        "team": "Espanyol"
+    },
+    {
+        "name": "Puado",
+        "team": "Espanyol"
+    },
+    {
+        "name": "Roberto",
+        "team": "Espanyol"
+    },
+    {
+        "name": "Cillessen",
+        "team": "Las Palmas"
+    },
+    {
+        "name": "Mckenna",
+        "team": "Las Palmas"
+    },
+    {
+        "name": "Essugo",
+        "team": "Las Palmas"
+    },
+    {
+        "name": "Sandro",
+        "team": "Las Palmas"
+    },
+    {
+        "name": "Moleiro",
+        "team": "Las Palmas"
+    },
+    {
+        "name": "Fabio Silva",
+        "team": "Las Palmas"
+    },
+    {
+        "name": "Dimitrovic",
+        "team": "Leganes"
+    },
+    {
+        "name": "Juan Cruz",
+        "team": "Leganes"
+    },
+    {
+        "name": "Rosier",
+        "team": "Leganes"
+    },
+    {
+        "name": "Dani Raba",
+        "team": "Leganes"
+    },
+    {
+        "name": "Nastacic",
+        "team": "Leganes"
+    },
+    {
+        "name": "Sivera",
+        "team": "Alaves"
+    },
+    {
+        "name": "Tenaglia",
+        "team": "Alaves"
+    },
+    {
+        "name": "Joan Jordan",
+        "team": "Alaves"
+    },
+    {
+        "name": "Carlos Vicente",
+        "team": "Alaves"
+    },
+    {
+        "name": "Kike Garcia",
+        "team": "Alaves"
+    },
+    {
+        "name": "Toni Martinez",
+        "team": "Alaves"
+    },
+    {
+        "name": "Mamardashvilli",
+        "team": "Valencia"
+    },
+    {
+        "name": "Mosquera",
+        "team": "Valencia"
+    },
+    {
+        "name": "Guerra",
+        "team": "Valencia"
+    },
+    {
+        "name": "Rioja",
+        "team": "Valencia"
+    },
+    {
+        "name": "Gaya",
+        "team": "Valencia"
+    },
+    {
+        "name": "Sadiq",
+        "team": "Valencia"
+    },
+    {
+        "name": "Karl Hein",
+        "team": "Valladolid"
+    },
+    {
+        "name": "Moro",
+        "team": "Valladolid"
+    },
+    {
+        "name": "Marcos Andre",
+        "team": "Valladolid"
+    },
+    {
+        "name": "Amallah",
+        "team": "Valladolid"
+    },
+    {
+        "name": "Sylla",
+        "team": "Valladolid"
+    }
+]
