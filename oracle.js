@@ -90,7 +90,7 @@ async function sendPacked(packedHex, id, nonce) {
         totalGas += BigInt(rcpt.gasUsed);
         latencies.push(dt);
 
-        console.log(`✓ id ${id}  gas=${rcpt.gasUsed}  ${dt} ms`);
+        console.log(`id ${id}  gas=${rcpt.gasUsed}  ${dt} ms`);
         return rcpt;
     }, { retries: 3, onRetry: (e, i) => console.log(`reintento id ${id} (${i})`) });
 }
@@ -102,7 +102,6 @@ async function sendPacked(packedHex, id, nonce) {
 
     console.time("batch");
     for (const p of stats) {
-        // cuidado con los registros que usan "nombre/equipo"
         if (p.goles === undefined) continue;    // ignora filas incompletas
         const packed = pack32(p);
         await sendPacked(packed, p.id, nonce++);
