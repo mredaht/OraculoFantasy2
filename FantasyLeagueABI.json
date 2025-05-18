@@ -1,1984 +1,884 @@
-{
-    "abi": [
-        {
-            "type": "constructor",
-            "inputs": [
-                {
-                    "name": "_fantasyPlayerNFT",
-                    "type": "address",
-                    "internalType": "address"
-                }
-            ],
-            "stateMutability": "nonpayable"
-        },
-        {
-            "type": "fallback",
-            "stateMutability": "payable"
-        },
-        {
-            "type": "receive",
-            "stateMutability": "payable"
-        },
-        {
-            "type": "function",
-            "name": "DEFAULT_ADMIN_ROLE",
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "bytes32",
-                    "internalType": "bytes32"
-                }
-            ],
-            "stateMutability": "view"
-        },
-        {
-            "type": "function",
-            "name": "ORACLE_ROLE",
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "bytes32",
-                    "internalType": "bytes32"
-                }
-            ],
-            "stateMutability": "view"
-        },
-        {
-            "type": "function",
-            "name": "UsuariosInscritos",
-            "inputs": [
-                {
-                    "name": "",
-                    "type": "address",
-                    "internalType": "address"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "bool",
-                    "internalType": "bool"
-                }
-            ],
-            "stateMutability": "view"
-        },
-        {
-            "type": "function",
-            "name": "actualizarEstadisticas",
-            "inputs": [
-                {
-                    "name": "_tokenId",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "_goles",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "_asistencias",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "_paradas",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "_penaltisParados",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "_despejes",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "_minutosJugados",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "_porteriaCero",
-                    "type": "bool",
-                    "internalType": "bool"
-                },
-                {
-                    "name": "_tarjetasAmarillas",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "_tarjetasRojas",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "_ganoPartido",
-                    "type": "bool",
-                    "internalType": "bool"
-                }
-            ],
-            "outputs": [],
-            "stateMutability": "nonpayable"
-        },
-        {
-            "type": "function",
-            "name": "actualizarPuntuacionesDeTodos",
-            "inputs": [],
-            "outputs": [],
-            "stateMutability": "nonpayable"
-        },
-        {
-            "type": "function",
-            "name": "calcularPuntuacionEquipo",
-            "inputs": [
-                {
-                    "name": "_jugador",
-                    "type": "address",
-                    "internalType": "address"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "total",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                }
-            ],
-            "stateMutability": "view"
-        },
-        {
-            "type": "function",
-            "name": "cargarJugadoresDisponibles",
-            "inputs": [],
-            "outputs": [],
-            "stateMutability": "nonpayable"
-        },
-        {
-            "type": "function",
-            "name": "distribuirPremio",
-            "inputs": [],
-            "outputs": [],
-            "stateMutability": "nonpayable"
-        },
-        {
-            "type": "function",
-            "name": "equipos",
-            "inputs": [
-                {
-                    "name": "",
-                    "type": "address",
-                    "internalType": "address"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "owner",
-                    "type": "address",
-                    "internalType": "address payable"
-                },
-                {
-                    "name": "nombre",
-                    "type": "string",
-                    "internalType": "string"
-                },
-                {
-                    "name": "puntuacionEquipo",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "seleccionado",
-                    "type": "bool",
-                    "internalType": "bool"
-                }
-            ],
-            "stateMutability": "view"
-        },
-        {
-            "type": "function",
-            "name": "fantasyPlayerNFT",
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "address",
-                    "internalType": "contract FantasyPlayerNFT"
-                }
-            ],
-            "stateMutability": "view"
-        },
-        {
-            "type": "function",
-            "name": "finalizarJornada",
-            "inputs": [],
-            "outputs": [],
-            "stateMutability": "nonpayable"
-        },
-        {
-            "type": "function",
-            "name": "gameStatus",
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "uint8",
-                    "internalType": "enum FantasyLeague.Status"
-                }
-            ],
-            "stateMutability": "view"
-        },
-        {
-            "type": "function",
-            "name": "getEquipo",
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "tuple",
-                    "internalType": "struct FantasyLeague.Equipo",
-                    "components": [
-                        {
-                            "name": "owner",
-                            "type": "address",
-                            "internalType": "address payable"
-                        },
-                        {
-                            "name": "nombre",
-                            "type": "string",
-                            "internalType": "string"
-                        },
-                        {
-                            "name": "jugadores",
-                            "type": "uint256[5]",
-                            "internalType": "uint256[5]"
-                        },
-                        {
-                            "name": "puntuacionEquipo",
-                            "type": "uint256",
-                            "internalType": "uint256"
-                        },
-                        {
-                            "name": "seleccionado",
-                            "type": "bool",
-                            "internalType": "bool"
-                        }
-                    ]
-                }
-            ],
-            "stateMutability": "view"
-        },
-        {
-            "type": "function",
-            "name": "getEquiposInscritos",
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "tuple[]",
-                    "internalType": "struct FantasyLeague.Equipo[]",
-                    "components": [
-                        {
-                            "name": "owner",
-                            "type": "address",
-                            "internalType": "address payable"
-                        },
-                        {
-                            "name": "nombre",
-                            "type": "string",
-                            "internalType": "string"
-                        },
-                        {
-                            "name": "jugadores",
-                            "type": "uint256[5]",
-                            "internalType": "uint256[5]"
-                        },
-                        {
-                            "name": "puntuacionEquipo",
-                            "type": "uint256",
-                            "internalType": "uint256"
-                        },
-                        {
-                            "name": "seleccionado",
-                            "type": "bool",
-                            "internalType": "bool"
-                        }
-                    ]
-                }
-            ],
-            "stateMutability": "view"
-        },
-        {
-            "type": "function",
-            "name": "getEstadoActual",
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "uint8",
-                    "internalType": "enum FantasyLeague.Status"
-                }
-            ],
-            "stateMutability": "view"
-        },
-        {
-            "type": "function",
-            "name": "getRoleAdmin",
-            "inputs": [
-                {
-                    "name": "role",
-                    "type": "bytes32",
-                    "internalType": "bytes32"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "bytes32",
-                    "internalType": "bytes32"
-                }
-            ],
-            "stateMutability": "view"
-        },
-        {
-            "type": "function",
-            "name": "grantRole",
-            "inputs": [
-                {
-                    "name": "role",
-                    "type": "bytes32",
-                    "internalType": "bytes32"
-                },
-                {
-                    "name": "account",
-                    "type": "address",
-                    "internalType": "address"
-                }
-            ],
-            "outputs": [],
-            "stateMutability": "nonpayable"
-        },
-        {
-            "type": "function",
-            "name": "hasRole",
-            "inputs": [
-                {
-                    "name": "role",
-                    "type": "bytes32",
-                    "internalType": "bytes32"
-                },
-                {
-                    "name": "account",
-                    "type": "address",
-                    "internalType": "address"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "bool",
-                    "internalType": "bool"
-                }
-            ],
-            "stateMutability": "view"
-        },
-        {
-            "type": "function",
-            "name": "iniciarJornada",
-            "inputs": [],
-            "outputs": [],
-            "stateMutability": "nonpayable"
-        },
-        {
-            "type": "function",
-            "name": "jugadorElegido",
-            "inputs": [
-                {
-                    "name": "",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "bool",
-                    "internalType": "bool"
-                }
-            ],
-            "stateMutability": "view"
-        },
-        {
-            "type": "function",
-            "name": "jugadores",
-            "inputs": [
-                {
-                    "name": "",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "id",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "nombre",
-                    "type": "string",
-                    "internalType": "string"
-                },
-                {
-                    "name": "equipo",
-                    "type": "string",
-                    "internalType": "string"
-                },
-                {
-                    "name": "puntuacion",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "goles",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "asistencias",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "paradas",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "penaltisParados",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "despejes",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "minutosJugados",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "porteriaCero",
-                    "type": "bool",
-                    "internalType": "bool"
-                },
-                {
-                    "name": "tarjetasAmarillas",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "tarjetasRojas",
-                    "type": "uint256",
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "ganoPartido",
-                    "type": "bool",
-                    "internalType": "bool"
-                }
-            ],
-            "stateMutability": "view"
-        },
-        {
-            "type": "function",
-            "name": "owner",
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "address",
-                    "internalType": "address"
-                }
-            ],
-            "stateMutability": "view"
-        },
-        {
-            "type": "function",
-            "name": "pagarEntrada",
-            "inputs": [],
-            "outputs": [],
-            "stateMutability": "payable"
-        },
-        {
-            "type": "function",
-            "name": "renounceOwnership",
-            "inputs": [],
-            "outputs": [],
-            "stateMutability": "nonpayable"
-        },
-        {
-            "type": "function",
-            "name": "renounceRole",
-            "inputs": [
-                {
-                    "name": "role",
-                    "type": "bytes32",
-                    "internalType": "bytes32"
-                },
-                {
-                    "name": "account",
-                    "type": "address",
-                    "internalType": "address"
-                }
-            ],
-            "outputs": [],
-            "stateMutability": "nonpayable"
-        },
-        {
-            "type": "function",
-            "name": "resetJornada",
-            "inputs": [],
-            "outputs": [],
-            "stateMutability": "nonpayable"
-        },
-        {
-            "type": "function",
-            "name": "revokeRole",
-            "inputs": [
-                {
-                    "name": "role",
-                    "type": "bytes32",
-                    "internalType": "bytes32"
-                },
-                {
-                    "name": "account",
-                    "type": "address",
-                    "internalType": "address"
-                }
-            ],
-            "outputs": [],
-            "stateMutability": "nonpayable"
-        },
-        {
-            "type": "function",
-            "name": "seleccionarJugadores",
-            "inputs": [
-                {
-                    "name": "_nombreEquipo",
-                    "type": "string",
-                    "internalType": "string"
-                },
-                {
-                    "name": "_jugadores",
-                    "type": "uint256[5]",
-                    "internalType": "uint256[5]"
-                }
-            ],
-            "outputs": [],
-            "stateMutability": "nonpayable"
-        },
-        {
-            "type": "function",
-            "name": "setOracle",
-            "inputs": [
-                {
-                    "name": "oracle",
-                    "type": "address",
-                    "internalType": "address"
-                }
-            ],
-            "outputs": [],
-            "stateMutability": "nonpayable"
-        },
-        {
-            "type": "function",
-            "name": "supportsInterface",
-            "inputs": [
-                {
-                    "name": "interfaceId",
-                    "type": "bytes4",
-                    "internalType": "bytes4"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "bool",
-                    "internalType": "bool"
-                }
-            ],
-            "stateMutability": "view"
-        },
-        {
-            "type": "function",
-            "name": "transferOwnership",
-            "inputs": [
-                {
-                    "name": "newOwner",
-                    "type": "address",
-                    "internalType": "address"
-                }
-            ],
-            "outputs": [],
-            "stateMutability": "nonpayable"
-        },
-        {
-            "type": "function",
-            "name": "withdraw",
-            "inputs": [],
-            "outputs": [],
-            "stateMutability": "nonpayable"
-        },
-        {
-            "type": "event",
-            "name": "EntradaPagada",
-            "inputs": [
-                {
-                    "name": "usuario",
-                    "type": "address",
-                    "indexed": true,
-                    "internalType": "address"
-                }
-            ],
-            "anonymous": false
-        },
-        {
-            "type": "event",
-            "name": "EstadisticasActualizadas",
-            "inputs": [
-                {
-                    "name": "jugadorId",
-                    "type": "uint256",
-                    "indexed": true,
-                    "internalType": "uint256"
-                },
-                {
-                    "name": "nuevaPuntuacion",
-                    "type": "uint256",
-                    "indexed": false,
-                    "internalType": "uint256"
-                }
-            ],
-            "anonymous": false
-        },
-        {
-            "type": "event",
-            "name": "EstadoJornadaActualizado",
-            "inputs": [
-                {
-                    "name": "nuevoEstado",
-                    "type": "uint8",
-                    "indexed": false,
-                    "internalType": "enum FantasyLeague.Status"
-                }
-            ],
-            "anonymous": false
-        },
-        {
-            "type": "event",
-            "name": "JornadaReiniciada",
-            "inputs": [],
-            "anonymous": false
-        },
-        {
-            "type": "event",
-            "name": "JugadoresSeleccionados",
-            "inputs": [
-                {
-                    "name": "usuario",
-                    "type": "address",
-                    "indexed": true,
-                    "internalType": "address"
-                },
-                {
-                    "name": "nombreEquipo",
-                    "type": "string",
-                    "indexed": false,
-                    "internalType": "string"
-                },
-                {
-                    "name": "jugadores",
-                    "type": "uint256[5]",
-                    "indexed": false,
-                    "internalType": "uint256[5]"
-                }
-            ],
-            "anonymous": false
-        },
-        {
-            "type": "event",
-            "name": "OwnershipTransferred",
-            "inputs": [
-                {
-                    "name": "previousOwner",
-                    "type": "address",
-                    "indexed": true,
-                    "internalType": "address"
-                },
-                {
-                    "name": "newOwner",
-                    "type": "address",
-                    "indexed": true,
-                    "internalType": "address"
-                }
-            ],
-            "anonymous": false
-        },
-        {
-            "type": "event",
-            "name": "PremioDistribuido",
-            "inputs": [
-                {
-                    "name": "ganador",
-                    "type": "address",
-                    "indexed": true,
-                    "internalType": "address"
-                },
-                {
-                    "name": "cantidad",
-                    "type": "uint256",
-                    "indexed": false,
-                    "internalType": "uint256"
-                }
-            ],
-            "anonymous": false
-        },
-        {
-            "type": "event",
-            "name": "RetiroDeFondos",
-            "inputs": [
-                {
-                    "name": "admin",
-                    "type": "address",
-                    "indexed": true,
-                    "internalType": "address"
-                },
-                {
-                    "name": "cantidad",
-                    "type": "uint256",
-                    "indexed": false,
-                    "internalType": "uint256"
-                }
-            ],
-            "anonymous": false
-        },
-        {
-            "type": "event",
-            "name": "RoleAdminChanged",
-            "inputs": [
-                {
-                    "name": "role",
-                    "type": "bytes32",
-                    "indexed": true,
-                    "internalType": "bytes32"
-                },
-                {
-                    "name": "previousAdminRole",
-                    "type": "bytes32",
-                    "indexed": true,
-                    "internalType": "bytes32"
-                },
-                {
-                    "name": "newAdminRole",
-                    "type": "bytes32",
-                    "indexed": true,
-                    "internalType": "bytes32"
-                }
-            ],
-            "anonymous": false
-        },
-        {
-            "type": "event",
-            "name": "RoleGranted",
-            "inputs": [
-                {
-                    "name": "role",
-                    "type": "bytes32",
-                    "indexed": true,
-                    "internalType": "bytes32"
-                },
-                {
-                    "name": "account",
-                    "type": "address",
-                    "indexed": true,
-                    "internalType": "address"
-                },
-                {
-                    "name": "sender",
-                    "type": "address",
-                    "indexed": true,
-                    "internalType": "address"
-                }
-            ],
-            "anonymous": false
-        },
-        {
-            "type": "event",
-            "name": "RoleRevoked",
-            "inputs": [
-                {
-                    "name": "role",
-                    "type": "bytes32",
-                    "indexed": true,
-                    "internalType": "bytes32"
-                },
-                {
-                    "name": "account",
-                    "type": "address",
-                    "indexed": true,
-                    "internalType": "address"
-                },
-                {
-                    "name": "sender",
-                    "type": "address",
-                    "indexed": true,
-                    "internalType": "address"
-                }
-            ],
-            "anonymous": false
-        }
-    ],
-    "bytecode": {
-        "object": "0x60803461013157601f612c3338819003918201601f19168301916001600160401b038311848410176101355780849260209460405283398101031261013157516001600160a01b03811690819003610131575f8054336001600160a01b0319821681178355916001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09080a36001600255600380546001600160a81b031916919091179055335f9081525f516020612c135f395f51905f52602052604090205460ff16156100e1575b604051612ac9908161014a8239f35b335f8181525f516020612c135f395f51905f5260205260408120805460ff1916600117905581907f2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d8180a46100d2565b5f80fd5b634e487b7160e01b5f52604160045260245ffdfe6080806040526004361015610098575b5036156100535760405162461bcd60e51b815260206004820152601560248201527446756e63696f6e206e6f207265636f6e6f6369646160581b6044820152606490fd5b60405162461bcd60e51b815260206004820152601c60248201527f4e6f207365206163657074616e207061676f73206469726563746f73000000006044820152606490fd5b5f3560e01c90816301ffc9a71461204e5750806307e2cea5146120145780630acaeff014611f93578063141998dd14611e90578063145f482514611e685780631f05d18414610bec578063248a9ca314611e3d5780632726021d14611c915780632c59d0ce14611c1a5780632f2ff15d14611b6157806336568abe14611acf5780633ccfd60b14611a115780634068dbf91461145f578063446da54f1461143457806348f65eaa14610eee5780634aead46c14610df25780634c7ef28714610d705780634ceebd5614610c6b578063715018a614610c14578063722fed7e14610bec5780637adbf97314610aff5780637e68e3ec14610a7a5780637f1f73b4146109a55780638da5cb5b1461097e57806391d14854146109355780639fc3c274146108f8578063a217fddf146108de578063aa0fa25a14610757578063c8532fd014610342578063d4225f6a14610313578063d547741f146102ce5763f2fde38b14610204575f61000f565b346102ca5760203660031901126102ca5761021d6120a1565b610225612896565b6001600160a01b03168015610276575f80546001600160a01b03198116831782556001600160a01b0316907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09080a3005b60405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b6064820152608490fd5b5f80fd5b346102ca5760403660031901126102ca576103116004356102ed6120b7565b9061030c610307825f526001602052600160405f20015490565b6127d1565b612815565b005b346102ca5760203660031901126102ca576004355f526008602052602060ff60405f2054166040519015158152f35b346102ca576101603660031901126102ca5760043560e43580151581036102ca57610144359081151582036102ca57335f9081527ff7c11a6d0ec535894a90c88b42cba2ccb348cb15b5e3ad22a710d1d4ac632819602052604090205460ff161561068257600454831015610649576103ba8361224f565b509060048201916024358355600581016044358155600682016064358155600783016084358155600884019060a4358255600985019260c435845561040f600a870197889060ff801983541691151516179055565b6101a0600b870195610104358755600c880197610124358955610442600d82019c8d9060ff801983541691151516179055565b60ff8060036040519361045485612105565b805485526104646001820161215d565b60208601526104756002820161215d565b6040860152019c8d546060850152549360808401948552549560a08401968752549660c08401978852549760e0840198895254986101008401998a52549b61012084019c8d5254169861014083019915158a52549961016083019a8b52549c61018083019d8e525416151592839101525f91610640575b518060021b90808204600414901517156105f157610509916124ee565b90516003810290808204600314901517156105f157610527916124ee565b9051808004600114811517156105f157610540916124ee565b90516005810290808204600514901517156105f15761055e916124ee565b9051808004600114811517156105f157610577916124ee565b9251601e811015610617575b5051610605575b51808004600114811517156105f1576105a2916128ed565b9151906003820291808304600314901517156105f1576105e56020927f7cb4cc1a9c2d927cc3b9495f0c44b489ede7ee414c909f31c7a134dd9cef7222946128ed565b809155604051908152a2005b634e487b7160e01b5f52601160045260245ffd5b90600381018091116105f1579061058a565b909261063091603c116106375760ff60025b16906124ee565b9186610583565b60ff6001610629565b600391506104ec565b60405162461bcd60e51b81526020600482015260116024820152704a756761646f72206e6f2065786973746560781b6044820152606490fd5b610753602061073360116106953361290b565b6037846106c17f68e79a7bf1e0bc45d0a330c573bc367f9cf464fd326078812f301165fbda4ef16129f1565b6040519687947f416363657373436f6e74726f6c3a206163636f756e7420000000000000000000828701528051918291018587015e8401907001034b99036b4b9b9b4b733903937b6329607d1b84830152805192839101604883015e01015f838201520301601f19810183528261213c565b60405162461bcd60e51b81526020600482015291829160248301906121fd565b0390fd5b346102ca575f3660031901126102ca5761076f61277a565b60ff60035460a01c1660038110156108ca57600261078d91146122ef565b610795612726565b6005545f9081805b82811061088e576001600160a01b038416801561085857476050810290808204605014901517156105f157606490045f80808084865af16107dc6123e4565b50156108145760207fe776dc24f32fabd24037693fabd96c5e90e03780a7765e52691083f3545c071791604051908152a26001600255005b606460405162461bcd60e51b815260206004820152602060248201527f5472616e73666572656e63696120616c2067616e61646f722066616c6c6964616044820152fd5b60405162461bcd60e51b815260206004820152600e60248201526d2737903430bc9033b0b730b237b960911b6044820152606490fd5b6108978161233a565b50546001600160a01b03166108ab816124fb565b8381116108bd575b505060010161079d565b90945091506001856108b3565b634e487b7160e01b5f52602160045260245ffd5b346102ca575f3660031901126102ca5760206040515f8152f35b346102ca5760203660031901126102ca576001600160a01b036109196120a1565b165f526007602052602060ff60405f2054166040519015158152f35b346102ca5760403660031901126102ca5761094e6120b7565b6004355f52600160205260405f209060018060a01b03165f52602052602060ff60405f2054166040519015158152f35b346102ca575f3660031901126102ca575f546040516001600160a01b039091168152602090f35b346102ca575f3660031901126102ca575f60806040516109c481612121565b828152606060208201526040516109dc60a08261213c565b60a036823760408201528260608201520152335f52600660205260ff600860405f2001541615610a3557335f526006602052610a31610a1d60405f206126cf565b60405191829160208352602083019061227f565b0390f35b60405162461bcd60e51b815260206004820152601860248201527f4e6f20686173207265676973747261646f2065717569706f00000000000000006044820152606490fd5b346102ca575f3660031901126102ca57610a9261277a565b60ff60035460a01c1660038110156108ca57610aae90156122ef565b6003805460ff60a01b1916600160a01b17908190556040517f28fa21692e8f591d5f7e88e6b8a2cf4a052a94b230d0ebca0b10bc2cdf99438a918190610afa9060a01c60ff1682612221565b0390a1005b346102ca5760203660031901126102ca57610b186120a1565b610b2061277a565b6001600160a01b0381165f9081527ff7c11a6d0ec535894a90c88b42cba2ccb348cb15b5e3ad22a710d1d4ac632819602052604090205460ff1615610b6157005b6001600160a01b03165f8181527ff7c11a6d0ec535894a90c88b42cba2ccb348cb15b5e3ad22a710d1d4ac63281960205260408120805460ff191660011790553391907f68e79a7bf1e0bc45d0a330c573bc367f9cf464fd326078812f301165fbda4ef1907f2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d9080a4005b346102ca575f3660031901126102ca57610a3160ff60035460a01c1660405191829182612221565b346102ca575f3660031901126102ca57610c2c612896565b5f80546001600160a01b0319811682556001600160a01b03167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e08280a3005b346102ca575f3660031901126102ca576005546001600160401b038111610d5c5760405190610ca060208260051b018361213c565b80825260208201908160055f527f036b6384b5eca791c62761152d0c79bb0604c104a5fb6f4eb0703f3154bb3db05f915b838310610d3e57848660405191829160208301906020845251809152604083019060408160051b85010192915f905b828210610d0f57505050500390f35b91936001919395506020610d2e8192603f198a8203018652885161227f565b9601920192018594939192610d00565b60096020600192610d4e856126cf565b815201920192019190610cd1565b634e487b7160e01b5f52604160045260245ffd5b346102ca575f3660031901126102ca57610d8861277a565b60ff60035460a01c1660038110156108ca576001610da691146122ef565b6003805460ff60a01b1916600160a11b17908190556040517f28fa21692e8f591d5f7e88e6b8a2cf4a052a94b230d0ebca0b10bc2cdf99438a918190610afa9060a01c60ff1682612221565b346102ca5760203660031901126102ca576004356004548110156102ca57610e199061224f565b508054610e286001830161215d565b91610e356002820161215d565b6003820154916004810154600582015460068301546007840154600885015490600986015492600a87015460ff1694600b88015496600c89015498600d015460ff16996040519d8e9d8e528d602081016101c090526101c001610e97916121fd565b8d810360408f0152610ea8916121fd565b9a60608d015260808c015260a08b015260c08a015260e0890152610100880152610120870152151561014086015261016085015261018084015215156101a08301520390f35b346102ca5760c03660031901126102ca576004356001600160401b0381116102ca57366023820112156102ca578060040135610f2981612234565b91610f37604051938461213c565b81835236602483830101116102ca57815f92602460209301838601378301015236604312156102ca57604051610f6e60a08261213c565b803660c4116102ca576024905b60c48210611424575050335f52600760205260ff60405f205416156113df576004545f5b60058110611324575050335f52600660205260ff600860405f200154166112df57815115611288575f5b6005811061125f575060405191610fdf83612121565b33808452602080850183815260408087018681525f60608901818152600160808b018181529783526006909652929020975188546001600160a01b0319166001600160a01b0391909116178855915180519193880191906001600160401b038211610d5c576110588261105285546120cd565b85612466565b602090601f83116001146111fc5761108792915f91836111f1575b50508160011b915f199060031b1c19161790565b90555b515f5b600581106111da57505060086110bb92869251600784015551151591019060ff801983541691151516179055565b335f52600660205260405f20600554600160401b811015610d5c578060016110e6920160055561233a565b6111c757818103611157575b50506111096040519160c0835260c08301906121fd565b915f602083015b6005821061114157337f417d20f0001b71b9ff4b092fa5814177d9166dbd07613f725f4a556064c879c685870386a2005b6020806001928551815201930191019091611110565b815481546001600160a01b0319166001600160a01b03919091161781556111c09160089060ff90829061119060018083019087016125b9565b6111a06002820160028701612698565b6007810154600786015501541691019060ff801983541691151516179055565b82806110f2565b634e487b7160e01b5f525f60045260245ffd5b600190602083519301926002828a0101550161108d565b015190508a80611073565b90601f19831691845f52815f20925f5b818110611247575090846001959493921061122f575b505050811b01905561108a565b01515f1960f88460031b161c19169055898080611222565b9293602060018192878601518155019501930161120c565b8061126c600192846124dd565b515f52600860205260405f208260ff1982541617905501610fc9565b60405162461bcd60e51b815260206004820152602960248201527f456c206e6f6d6272652064656c2065717569706f206e6f20707565646520657360448201526874617220766163696f60b81b6064820152608490fd5b60405162461bcd60e51b815260206004820152601e60248201527f59612073656c656363696f6e6173746520747573206a756761646f72657300006044820152606490fd5b8161132f82856124dd565b5110156113a15761134081846124dd565b515f52600860205260ff60405f20541661135c57600101610f9f565b60405162461bcd60e51b815260206004820152601760248201527f4a756761646f722079612073656c656363696f6e61646f0000000000000000006044820152606490fd5b60405162461bcd60e51b81526020600482015260166024820152754944206465206a756761646f7220696e76616c69646f60501b6044820152606490fd5b60405162461bcd60e51b815260206004820152601a60248201527f4e6f206861732070616761646f206c6120656e747261646121210000000000006044820152606490fd5b8135815260209182019101610f7b565b346102ca5760203660031901126102ca5760206114576114526120a1565b6124fb565b604051908152f35b346102ca575f3660031901126102ca5761147761277a565b6003546040516365507c9560e11b815290602090829060049082906001600160a01b03165afa90811561190b575f916119df575b506004545f60045580611916575b505f5b8181106114c557005b600354604051631cab5c9d60e31b815260048101839052905f90829060249082906001600160a01b03165afa90811561190b575f916117e9575b508051604060208301519201516040519161151983612105565b825260208201928352604082019081525f60608301525f60808301525f60a08301525f60c08301525f60e08301525f6101008301525f6101208301525f6101408301525f6101608301525f6101808301525f6101a0830152600454600160401b811015610d5c57806001611590920160045561224f565b9390936111c7578251845551805160018501916001600160401b038211610d5c576115bf8261105285546120cd565b602090601f8311600114611786576115ed92915f918361177b5750508160011b915f199060031b1c19161790565b90555b518051906001600160401b038211610d5c5761161c8261161360028701546120cd565b60028701612466565b602090601f8311600114611704576116f393611658846001989795600d956101a0955f926116f95750508160011b915f199060031b1c19161790565b60028501555b606081015160038501556080810151600485015560a0810151600585015560c0810151600685015560e08101516007850155610100810151600885015561012081015160098501556116c66101408201511515600a86019060ff801983541691151516179055565b610160810151600b850155610180810151600c8501550151151591019060ff801983541691151516179055565b016114bc565b015190508b80611073565b90600285015f52805f20915f5b601f1985168110611763575093600184600d946101a0946116f398849b9a98601f1981161061174b575b505050811b01600285015561165e565b01515f1960f88460031b161c191690558a808061173b565b91926020600181928685015181550194019201611711565b015190508980611073565b90601f19831691845f52815f20925f5b8181106117d157509084600195949392106117b9575b505050811b0190556115f0565b01515f1960f88460031b161c191690558880806117ac565b92936020600181928786015181550195019301611796565b90503d805f833e6117fa818361213c565b8101906020818303126102ca578051906001600160401b0382116102ca57016101c0818303126102ca576040519161183183612105565b8151835260208201516001600160401b0381116102ca5781611854918401612413565b60208401526040820151916001600160401b0383116102ca5761187f6101a0926118ff948301612413565b6040850152606081015160608501526080810151608085015260a081015160a085015260c081015160c085015260e081015160e08501526101008101516101008501526101208101516101208501526118db6101408201612459565b61014085015261016081015161016085015261018081015161018085015201612459565b6101a0820152836114ff565b6040513d5f823e3d90fd5b80600e0290600e8204036105f15760045f527f8a35acfbc15ff81a39ae7d344fd709f28e8600b4aa8c65c6b64bfe7fe36bd19b017f8a35acfbc15ff81a39ae7d344fd709f28e8600b4aa8c65c6b64bfe7fe36bd19b5b81811061197957506114b9565b805f600e925561198b6001820161236c565b6119976002820161236c565b5f60038201555f60048201555f60058201555f60068201555f60078201555f60088201555f60098201555f600a8201555f600b8201555f600c8201555f600d8201550161196c565b90506020813d602011611a09575b816119fa6020938361213c565b810103126102ca5751816114ab565b3d91506119ed565b346102ca575f3660031901126102ca57611a2961277a565b611a31612726565b476014810290808204601414901517156105f157606490045f80808084335af1611a596123e4565b5015611a92576040519081527f96d869f70be503ccf6a49e2c274e6f1760b0cbd2c0a516e72a7f90e667a8f28c60203392a26001600255005b60405162461bcd60e51b81526020600482015260156024820152745472616e73666572656e6369612066616c6c69646160581b6044820152606490fd5b346102ca5760403660031901126102ca57611ae86120b7565b336001600160a01b03821603611b045761031190600435612815565b60405162461bcd60e51b815260206004820152602f60248201527f416363657373436f6e74726f6c3a2063616e206f6e6c792072656e6f756e636560448201526e103937b632b9903337b91039b2b63360891b6064820152608490fd5b346102ca5760403660031901126102ca57600435611b7d6120b7565b90611b97610307825f526001602052600160405f20015490565b805f52600160205260405f2060018060a01b0383165f5260205260ff60405f20541615611bc057005b5f8181526001602081815260408084206001600160a01b0396909616808552959091528220805460ff19169091179055339291907f2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d9080a4005b346102ca575f3660031901126102ca57611c3261277a565b60ff60035460a01c1660038110156108ca576002611c5091146122ef565b5f5b6005548110156103115780611c6860019261233a565b50828060a01b03905416611c7b816124fb565b905f526006602052600760405f20015501611c52565b346102ca575f3660031901126102ca57611ca961277a565b60ff60035460a01c1660038110156108ca576002611cc791146122ef565b5f5b600554811015611d285780611cdf60019261233a565b50828060a01b039054165f526006602052611cfc60405f206123ba565b611d058161233a565b50828060a01b039054165f52600760205260405f2060ff19815416905501611cc9565b6005545f60055580611dc8575b505f5b600454811015611d5f575f818152600860205260409020805460ff19169055600101611d38565b6003805460ff60a01b191690556040517f28fa21692e8f591d5f7e88e6b8a2cf4a052a94b230d0ebca0b10bc2cdf99438a907fd590c98278372123dc9771a5f7f1340b9d85f549577c3ba1f6ed1b72b2387f795f80a180610afa60ff60035460a01c1682612221565b806009029060098204036105f15760055f527f036b6384b5eca791c62761152d0c79bb0604c104a5fb6f4eb0703f3154bb3db0017f036b6384b5eca791c62761152d0c79bb0604c104a5fb6f4eb0703f3154bb3db05b818110611e2b5750611d35565b80611e376009926123ba565b01611e1e565b346102ca5760203660031901126102ca5760206114576004355f526001602052600160405f20015490565b346102ca575f3660031901126102ca576003546040516001600160a01b039091168152602090f35b5f3660031901126102ca57611ea3612726565b67016345785d8a00003403611f4e57335f52600760205260ff60405f205416611f0957335f52600760205260405f20600160ff19825416179055337fcb2130f1b7580df591ec8f98192e10493a06a608a9806eb9e4d676705ea456545f80a26001600255005b60405162461bcd60e51b815260206004820152601f60248201527f596120657374617320696e73637269746f20656e206c61206a6f726e616461006044820152606490fd5b60405162461bcd60e51b815260206004820152601b60248201527f4c6120656e74726164612063756573746120302e3120657468657200000000006044820152606490fd5b346102ca5760203660031901126102ca576001600160a01b03611fb46120a1565b165f90815260066020526040902080546001600160a01b0316611fd96001830161215d565b9160ff600860078301549201541661200360405194859485526080602086015260808501906121fd565b916040840152151560608301520390f35b346102ca575f3660031901126102ca5760206040517f68e79a7bf1e0bc45d0a330c573bc367f9cf464fd326078812f301165fbda4ef18152f35b346102ca5760203660031901126102ca576004359063ffffffff60e01b82168092036102ca57602091637965db0b60e01b8114908115612090575b5015158152f35b6301ffc9a760e01b14905083612089565b600435906001600160a01b03821682036102ca57565b602435906001600160a01b03821682036102ca57565b90600182811c921680156120fb575b60208310146120e757565b634e487b7160e01b5f52602260045260245ffd5b91607f16916120dc565b6101c081019081106001600160401b03821117610d5c57604052565b60a081019081106001600160401b03821117610d5c57604052565b90601f801991011681019081106001600160401b03821117610d5c57604052565b9060405191825f825492612170846120cd565b80845293600181169081156121db5750600114612197575b506121959250038361213c565b565b90505f9291925260205f20905f915b8183106121bf575050906020612195928201015f612188565b60209193508060019154838589010152019101909184926121a6565b90506020925061219594915060ff191682840152151560051b8201015f612188565b805180835260209291819084018484015e5f828201840152601f01601f1916010190565b9190602083019260038210156108ca5752565b6001600160401b038111610d5c57601f01601f191660200190565b60045481101561226b5760045f52600e60205f20910201905f90565b634e487b7160e01b5f52603260045260245ffd5b9060018060a01b0382511681526122a7602083015161012060208401526101208301906121fd565b916040810151604083015f905b600582106122d957505050608081606061010093015160e08501520151151591015290565b60208060019285518152019301910190916122b4565b156122f657565b606460405162461bcd60e51b815260206004820152602060248201527f45737461646f20696e76616c69646f2070617261206573746120616363696f6e6044820152fd5b60055481101561226b5760055f52600960205f20910201905f90565b818110612361575050565b5f8155600101612356565b61237681546120cd565b9081612380575050565b81601f5f9311600114612391575055565b818352602083206123ad91601f0160051c810190600101612356565b8082528160208120915555565b60085f918281556123cd6001820161236c565b82600782016123df8160028501612356565b550155565b3d1561240e573d906123f582612234565b91612403604051938461213c565b82523d5f602084013e565b606090565b81601f820112156102ca5780519061242a82612234565b92612438604051948561213c565b828452602083830101116102ca57815f9260208093018386015e8301015290565b519081151582036102ca57565b9190601f811161247557505050565b612195925f5260205f20906020601f840160051c8301931061249f575b601f0160051c0190612356565b9091508190612492565b60405191905f835b600582106124c75750505061219560a08361213c565b60016020819285548152019301910190916124b1565b90600581101561226b5760051b0190565b919082018092116105f157565b6001600160a01b03165f818152600660205260408120600801549092919060ff1615612574575f526006602052612537600260405f20016124a9565b5f905b60058210612546575050565b909261256c600191600361256361255d88876124dd565b5161224f565b500154906124ee565b93019061253a565b60405162461bcd60e51b815260206004820152601a60248201527f456c206a756761646f72206e6f207469656e652065717569706f0000000000006044820152606490fd5b919091828114612693576125cd83546120cd565b6001600160401b038111610d5c576125ef816125e984546120cd565b84612466565b5f93601f821160011461262d5761261e92939482915f926126225750508160011b915f199060031b1c19161790565b9055565b015490505f80611073565b601f198216905f5260205f2094835f5260205f20915f5b81811061267b57509583600195969710612663575b505050811b019055565b01545f1960f88460031b161c191690555f8080612659565b9192600180602092868b015481550194019201612644565b509050565b908082146126cb57908154905f915b600583106126b55750505050565b60018091940192835494818401550191926126a7565b5050565b906040516126dc81612121565b608060ff6008839560018060a01b0381541685526126fc6001820161215d565b602086015261270d600282016124a9565b6040860152600781015460608601520154161515910152565b60028054146127355760028055565b60405162461bcd60e51b815260206004820152601f60248201527f5265656e7472616e637947756172643a207265656e7472616e742063616c6c006044820152606490fd5b335f9081527fa6eef7e35abe7026729641147f7915573c7e97b47efa546f5f6e3230263bcb49602052604090205460ff16156127b257565b610753602061073360116127c53361290b565b6037846106c15f6129f1565b5f81815260016020908152604080832033845290915290205460ff16156127f55750565b60206107336011610753936037846106c161280f3361290b565b936129f1565b805f52600160205260405f2060018060a01b0383165f5260205260ff60405f20541661283f575050565b5f8181526001602090815260408083206001600160a01b0395909516808452949091528120805460ff19169055339291907ff6391f5c32d9c69d2a47ea670b442974b53935d1edc7fd64eb21e047a839171b9080a4565b5f546001600160a01b031633036128a957565b606460405162461bcd60e51b815260206004820152602060248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e65726044820152fd5b919082039182116105f157565b90815181101561226b570160200190565b612915602a612234565b90612923604051928361213c565b602a8252612931602a612234565b6020830190601f190136823782511561226b576030905381516001101561226b576078602183015360295b600181116129b0575061296c5790565b606460405162461bcd60e51b815260206004820152602060248201527f537472696e67733a20686578206c656e67746820696e73756666696369656e746044820152fd5b90600f8116601081101561226b576f181899199a1a9b1b9c1cb0b131b232b360811b901a6129de83856128fa565b5360041c9080156105f1575f190161295c565b6129fb6042612234565b90612a09604051928361213c565b60428252612a176042612234565b6020830190601f190136823782511561226b576030905381516001101561226b576078602183015360415b60018111612a52575061296c5790565b90600f8116601081101561226b576f181899199a1a9b1b9c1cb0b131b232b360811b901a612a8083856128fa565b5360041c9080156105f1575f1901612a4256fea264697066735822122096300036766029e1f9503b0444f650f899f38c7585894fde5a30e689ab42e40164736f6c634300081c0033a6eef7e35abe7026729641147f7915573c7e97b47efa546f5f6e3230263bcb49",
-        "sourceMap": "435:11477:42:-:0;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;-1:-1:-1;;;;;435:11477:42;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;435:11477:42;;;;;;;;-1:-1:-1;435:11477:42;;719:10:32;-1:-1:-1;;;;;;435:11477:42;;;;;;719:10:32;-1:-1:-1;;;;;435:11477:42;;;;2566:40:21;;-1:-1:-1;2566:40:21;1716:1:25;1821:22;1716:1;2185:25:42;435:11477;;-1:-1:-1;;;;;;435:11477:42;;;;;;;719:10:32;-1:-1:-1;435:11477:42;;;-1:-1:-1;;;;;;;;;;;435:11477:42;;;;;;;;7669:23:19;7665:149;;-1:-1:-1;435:11477:42;;;;;;;;;7665:149:19;719:10:32;-1:-1:-1;435:11477:42;;;-1:-1:-1;;;;;;;;;;;435:11477:42;;;;;;;-1:-1:-1;;435:11477:42;1716:1:25;435:11477:42;;;719:10:32;;7763:40:19;-1:-1:-1;;7763:40:19;7665:149;;435:11477:42;-1:-1:-1;435:11477:42;;;;;;-1:-1:-1;435:11477:42;;;;;-1:-1:-1;435:11477:42",
-        "linkReferences": {}
-    },
-    "deployedBytecode": {
-        "object": "0x6080806040526004361015610098575b5036156100535760405162461bcd60e51b815260206004820152601560248201527446756e63696f6e206e6f207265636f6e6f6369646160581b6044820152606490fd5b60405162461bcd60e51b815260206004820152601c60248201527f4e6f207365206163657074616e207061676f73206469726563746f73000000006044820152606490fd5b5f3560e01c90816301ffc9a71461204e5750806307e2cea5146120145780630acaeff014611f93578063141998dd14611e90578063145f482514611e685780631f05d18414610bec578063248a9ca314611e3d5780632726021d14611c915780632c59d0ce14611c1a5780632f2ff15d14611b6157806336568abe14611acf5780633ccfd60b14611a115780634068dbf91461145f578063446da54f1461143457806348f65eaa14610eee5780634aead46c14610df25780634c7ef28714610d705780634ceebd5614610c6b578063715018a614610c14578063722fed7e14610bec5780637adbf97314610aff5780637e68e3ec14610a7a5780637f1f73b4146109a55780638da5cb5b1461097e57806391d14854146109355780639fc3c274146108f8578063a217fddf146108de578063aa0fa25a14610757578063c8532fd014610342578063d4225f6a14610313578063d547741f146102ce5763f2fde38b14610204575f61000f565b346102ca5760203660031901126102ca5761021d6120a1565b610225612896565b6001600160a01b03168015610276575f80546001600160a01b03198116831782556001600160a01b0316907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09080a3005b60405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b6064820152608490fd5b5f80fd5b346102ca5760403660031901126102ca576103116004356102ed6120b7565b9061030c610307825f526001602052600160405f20015490565b6127d1565b612815565b005b346102ca5760203660031901126102ca576004355f526008602052602060ff60405f2054166040519015158152f35b346102ca576101603660031901126102ca5760043560e43580151581036102ca57610144359081151582036102ca57335f9081527ff7c11a6d0ec535894a90c88b42cba2ccb348cb15b5e3ad22a710d1d4ac632819602052604090205460ff161561068257600454831015610649576103ba8361224f565b509060048201916024358355600581016044358155600682016064358155600783016084358155600884019060a4358255600985019260c435845561040f600a870197889060ff801983541691151516179055565b6101a0600b870195610104358755600c880197610124358955610442600d82019c8d9060ff801983541691151516179055565b60ff8060036040519361045485612105565b805485526104646001820161215d565b60208601526104756002820161215d565b6040860152019c8d546060850152549360808401948552549560a08401968752549660c08401978852549760e0840198895254986101008401998a52549b61012084019c8d5254169861014083019915158a52549961016083019a8b52549c61018083019d8e525416151592839101525f91610640575b518060021b90808204600414901517156105f157610509916124ee565b90516003810290808204600314901517156105f157610527916124ee565b9051808004600114811517156105f157610540916124ee565b90516005810290808204600514901517156105f15761055e916124ee565b9051808004600114811517156105f157610577916124ee565b9251601e811015610617575b5051610605575b51808004600114811517156105f1576105a2916128ed565b9151906003820291808304600314901517156105f1576105e56020927f7cb4cc1a9c2d927cc3b9495f0c44b489ede7ee414c909f31c7a134dd9cef7222946128ed565b809155604051908152a2005b634e487b7160e01b5f52601160045260245ffd5b90600381018091116105f1579061058a565b909261063091603c116106375760ff60025b16906124ee565b9186610583565b60ff6001610629565b600391506104ec565b60405162461bcd60e51b81526020600482015260116024820152704a756761646f72206e6f2065786973746560781b6044820152606490fd5b610753602061073360116106953361290b565b6037846106c17f68e79a7bf1e0bc45d0a330c573bc367f9cf464fd326078812f301165fbda4ef16129f1565b6040519687947f416363657373436f6e74726f6c3a206163636f756e7420000000000000000000828701528051918291018587015e8401907001034b99036b4b9b9b4b733903937b6329607d1b84830152805192839101604883015e01015f838201520301601f19810183528261213c565b60405162461bcd60e51b81526020600482015291829160248301906121fd565b0390fd5b346102ca575f3660031901126102ca5761076f61277a565b60ff60035460a01c1660038110156108ca57600261078d91146122ef565b610795612726565b6005545f9081805b82811061088e576001600160a01b038416801561085857476050810290808204605014901517156105f157606490045f80808084865af16107dc6123e4565b50156108145760207fe776dc24f32fabd24037693fabd96c5e90e03780a7765e52691083f3545c071791604051908152a26001600255005b606460405162461bcd60e51b815260206004820152602060248201527f5472616e73666572656e63696120616c2067616e61646f722066616c6c6964616044820152fd5b60405162461bcd60e51b815260206004820152600e60248201526d2737903430bc9033b0b730b237b960911b6044820152606490fd5b6108978161233a565b50546001600160a01b03166108ab816124fb565b8381116108bd575b505060010161079d565b90945091506001856108b3565b634e487b7160e01b5f52602160045260245ffd5b346102ca575f3660031901126102ca5760206040515f8152f35b346102ca5760203660031901126102ca576001600160a01b036109196120a1565b165f526007602052602060ff60405f2054166040519015158152f35b346102ca5760403660031901126102ca5761094e6120b7565b6004355f52600160205260405f209060018060a01b03165f52602052602060ff60405f2054166040519015158152f35b346102ca575f3660031901126102ca575f546040516001600160a01b039091168152602090f35b346102ca575f3660031901126102ca575f60806040516109c481612121565b828152606060208201526040516109dc60a08261213c565b60a036823760408201528260608201520152335f52600660205260ff600860405f2001541615610a3557335f526006602052610a31610a1d60405f206126cf565b60405191829160208352602083019061227f565b0390f35b60405162461bcd60e51b815260206004820152601860248201527f4e6f20686173207265676973747261646f2065717569706f00000000000000006044820152606490fd5b346102ca575f3660031901126102ca57610a9261277a565b60ff60035460a01c1660038110156108ca57610aae90156122ef565b6003805460ff60a01b1916600160a01b17908190556040517f28fa21692e8f591d5f7e88e6b8a2cf4a052a94b230d0ebca0b10bc2cdf99438a918190610afa9060a01c60ff1682612221565b0390a1005b346102ca5760203660031901126102ca57610b186120a1565b610b2061277a565b6001600160a01b0381165f9081527ff7c11a6d0ec535894a90c88b42cba2ccb348cb15b5e3ad22a710d1d4ac632819602052604090205460ff1615610b6157005b6001600160a01b03165f8181527ff7c11a6d0ec535894a90c88b42cba2ccb348cb15b5e3ad22a710d1d4ac63281960205260408120805460ff191660011790553391907f68e79a7bf1e0bc45d0a330c573bc367f9cf464fd326078812f301165fbda4ef1907f2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d9080a4005b346102ca575f3660031901126102ca57610a3160ff60035460a01c1660405191829182612221565b346102ca575f3660031901126102ca57610c2c612896565b5f80546001600160a01b0319811682556001600160a01b03167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e08280a3005b346102ca575f3660031901126102ca576005546001600160401b038111610d5c5760405190610ca060208260051b018361213c565b80825260208201908160055f527f036b6384b5eca791c62761152d0c79bb0604c104a5fb6f4eb0703f3154bb3db05f915b838310610d3e57848660405191829160208301906020845251809152604083019060408160051b85010192915f905b828210610d0f57505050500390f35b91936001919395506020610d2e8192603f198a8203018652885161227f565b9601920192018594939192610d00565b60096020600192610d4e856126cf565b815201920192019190610cd1565b634e487b7160e01b5f52604160045260245ffd5b346102ca575f3660031901126102ca57610d8861277a565b60ff60035460a01c1660038110156108ca576001610da691146122ef565b6003805460ff60a01b1916600160a11b17908190556040517f28fa21692e8f591d5f7e88e6b8a2cf4a052a94b230d0ebca0b10bc2cdf99438a918190610afa9060a01c60ff1682612221565b346102ca5760203660031901126102ca576004356004548110156102ca57610e199061224f565b508054610e286001830161215d565b91610e356002820161215d565b6003820154916004810154600582015460068301546007840154600885015490600986015492600a87015460ff1694600b88015496600c89015498600d015460ff16996040519d8e9d8e528d602081016101c090526101c001610e97916121fd565b8d810360408f0152610ea8916121fd565b9a60608d015260808c015260a08b015260c08a015260e0890152610100880152610120870152151561014086015261016085015261018084015215156101a08301520390f35b346102ca5760c03660031901126102ca576004356001600160401b0381116102ca57366023820112156102ca578060040135610f2981612234565b91610f37604051938461213c565b81835236602483830101116102ca57815f92602460209301838601378301015236604312156102ca57604051610f6e60a08261213c565b803660c4116102ca576024905b60c48210611424575050335f52600760205260ff60405f205416156113df576004545f5b60058110611324575050335f52600660205260ff600860405f200154166112df57815115611288575f5b6005811061125f575060405191610fdf83612121565b33808452602080850183815260408087018681525f60608901818152600160808b018181529783526006909652929020975188546001600160a01b0319166001600160a01b0391909116178855915180519193880191906001600160401b038211610d5c576110588261105285546120cd565b85612466565b602090601f83116001146111fc5761108792915f91836111f1575b50508160011b915f199060031b1c19161790565b90555b515f5b600581106111da57505060086110bb92869251600784015551151591019060ff801983541691151516179055565b335f52600660205260405f20600554600160401b811015610d5c578060016110e6920160055561233a565b6111c757818103611157575b50506111096040519160c0835260c08301906121fd565b915f602083015b6005821061114157337f417d20f0001b71b9ff4b092fa5814177d9166dbd07613f725f4a556064c879c685870386a2005b6020806001928551815201930191019091611110565b815481546001600160a01b0319166001600160a01b03919091161781556111c09160089060ff90829061119060018083019087016125b9565b6111a06002820160028701612698565b6007810154600786015501541691019060ff801983541691151516179055565b82806110f2565b634e487b7160e01b5f525f60045260245ffd5b600190602083519301926002828a0101550161108d565b015190508a80611073565b90601f19831691845f52815f20925f5b818110611247575090846001959493921061122f575b505050811b01905561108a565b01515f1960f88460031b161c19169055898080611222565b9293602060018192878601518155019501930161120c565b8061126c600192846124dd565b515f52600860205260405f208260ff1982541617905501610fc9565b60405162461bcd60e51b815260206004820152602960248201527f456c206e6f6d6272652064656c2065717569706f206e6f20707565646520657360448201526874617220766163696f60b81b6064820152608490fd5b60405162461bcd60e51b815260206004820152601e60248201527f59612073656c656363696f6e6173746520747573206a756761646f72657300006044820152606490fd5b8161132f82856124dd565b5110156113a15761134081846124dd565b515f52600860205260ff60405f20541661135c57600101610f9f565b60405162461bcd60e51b815260206004820152601760248201527f4a756761646f722079612073656c656363696f6e61646f0000000000000000006044820152606490fd5b60405162461bcd60e51b81526020600482015260166024820152754944206465206a756761646f7220696e76616c69646f60501b6044820152606490fd5b60405162461bcd60e51b815260206004820152601a60248201527f4e6f206861732070616761646f206c6120656e747261646121210000000000006044820152606490fd5b8135815260209182019101610f7b565b346102ca5760203660031901126102ca5760206114576114526120a1565b6124fb565b604051908152f35b346102ca575f3660031901126102ca5761147761277a565b6003546040516365507c9560e11b815290602090829060049082906001600160a01b03165afa90811561190b575f916119df575b506004545f60045580611916575b505f5b8181106114c557005b600354604051631cab5c9d60e31b815260048101839052905f90829060249082906001600160a01b03165afa90811561190b575f916117e9575b508051604060208301519201516040519161151983612105565b825260208201928352604082019081525f60608301525f60808301525f60a08301525f60c08301525f60e08301525f6101008301525f6101208301525f6101408301525f6101608301525f6101808301525f6101a0830152600454600160401b811015610d5c57806001611590920160045561224f565b9390936111c7578251845551805160018501916001600160401b038211610d5c576115bf8261105285546120cd565b602090601f8311600114611786576115ed92915f918361177b5750508160011b915f199060031b1c19161790565b90555b518051906001600160401b038211610d5c5761161c8261161360028701546120cd565b60028701612466565b602090601f8311600114611704576116f393611658846001989795600d956101a0955f926116f95750508160011b915f199060031b1c19161790565b60028501555b606081015160038501556080810151600485015560a0810151600585015560c0810151600685015560e08101516007850155610100810151600885015561012081015160098501556116c66101408201511515600a86019060ff801983541691151516179055565b610160810151600b850155610180810151600c8501550151151591019060ff801983541691151516179055565b016114bc565b015190508b80611073565b90600285015f52805f20915f5b601f1985168110611763575093600184600d946101a0946116f398849b9a98601f1981161061174b575b505050811b01600285015561165e565b01515f1960f88460031b161c191690558a808061173b565b91926020600181928685015181550194019201611711565b015190508980611073565b90601f19831691845f52815f20925f5b8181106117d157509084600195949392106117b9575b505050811b0190556115f0565b01515f1960f88460031b161c191690558880806117ac565b92936020600181928786015181550195019301611796565b90503d805f833e6117fa818361213c565b8101906020818303126102ca578051906001600160401b0382116102ca57016101c0818303126102ca576040519161183183612105565b8151835260208201516001600160401b0381116102ca5781611854918401612413565b60208401526040820151916001600160401b0383116102ca5761187f6101a0926118ff948301612413565b6040850152606081015160608501526080810151608085015260a081015160a085015260c081015160c085015260e081015160e08501526101008101516101008501526101208101516101208501526118db6101408201612459565b61014085015261016081015161016085015261018081015161018085015201612459565b6101a0820152836114ff565b6040513d5f823e3d90fd5b80600e0290600e8204036105f15760045f527f8a35acfbc15ff81a39ae7d344fd709f28e8600b4aa8c65c6b64bfe7fe36bd19b017f8a35acfbc15ff81a39ae7d344fd709f28e8600b4aa8c65c6b64bfe7fe36bd19b5b81811061197957506114b9565b805f600e925561198b6001820161236c565b6119976002820161236c565b5f60038201555f60048201555f60058201555f60068201555f60078201555f60088201555f60098201555f600a8201555f600b8201555f600c8201555f600d8201550161196c565b90506020813d602011611a09575b816119fa6020938361213c565b810103126102ca5751816114ab565b3d91506119ed565b346102ca575f3660031901126102ca57611a2961277a565b611a31612726565b476014810290808204601414901517156105f157606490045f80808084335af1611a596123e4565b5015611a92576040519081527f96d869f70be503ccf6a49e2c274e6f1760b0cbd2c0a516e72a7f90e667a8f28c60203392a26001600255005b60405162461bcd60e51b81526020600482015260156024820152745472616e73666572656e6369612066616c6c69646160581b6044820152606490fd5b346102ca5760403660031901126102ca57611ae86120b7565b336001600160a01b03821603611b045761031190600435612815565b60405162461bcd60e51b815260206004820152602f60248201527f416363657373436f6e74726f6c3a2063616e206f6e6c792072656e6f756e636560448201526e103937b632b9903337b91039b2b63360891b6064820152608490fd5b346102ca5760403660031901126102ca57600435611b7d6120b7565b90611b97610307825f526001602052600160405f20015490565b805f52600160205260405f2060018060a01b0383165f5260205260ff60405f20541615611bc057005b5f8181526001602081815260408084206001600160a01b0396909616808552959091528220805460ff19169091179055339291907f2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d9080a4005b346102ca575f3660031901126102ca57611c3261277a565b60ff60035460a01c1660038110156108ca576002611c5091146122ef565b5f5b6005548110156103115780611c6860019261233a565b50828060a01b03905416611c7b816124fb565b905f526006602052600760405f20015501611c52565b346102ca575f3660031901126102ca57611ca961277a565b60ff60035460a01c1660038110156108ca576002611cc791146122ef565b5f5b600554811015611d285780611cdf60019261233a565b50828060a01b039054165f526006602052611cfc60405f206123ba565b611d058161233a565b50828060a01b039054165f52600760205260405f2060ff19815416905501611cc9565b6005545f60055580611dc8575b505f5b600454811015611d5f575f818152600860205260409020805460ff19169055600101611d38565b6003805460ff60a01b191690556040517f28fa21692e8f591d5f7e88e6b8a2cf4a052a94b230d0ebca0b10bc2cdf99438a907fd590c98278372123dc9771a5f7f1340b9d85f549577c3ba1f6ed1b72b2387f795f80a180610afa60ff60035460a01c1682612221565b806009029060098204036105f15760055f527f036b6384b5eca791c62761152d0c79bb0604c104a5fb6f4eb0703f3154bb3db0017f036b6384b5eca791c62761152d0c79bb0604c104a5fb6f4eb0703f3154bb3db05b818110611e2b5750611d35565b80611e376009926123ba565b01611e1e565b346102ca5760203660031901126102ca5760206114576004355f526001602052600160405f20015490565b346102ca575f3660031901126102ca576003546040516001600160a01b039091168152602090f35b5f3660031901126102ca57611ea3612726565b67016345785d8a00003403611f4e57335f52600760205260ff60405f205416611f0957335f52600760205260405f20600160ff19825416179055337fcb2130f1b7580df591ec8f98192e10493a06a608a9806eb9e4d676705ea456545f80a26001600255005b60405162461bcd60e51b815260206004820152601f60248201527f596120657374617320696e73637269746f20656e206c61206a6f726e616461006044820152606490fd5b60405162461bcd60e51b815260206004820152601b60248201527f4c6120656e74726164612063756573746120302e3120657468657200000000006044820152606490fd5b346102ca5760203660031901126102ca576001600160a01b03611fb46120a1565b165f90815260066020526040902080546001600160a01b0316611fd96001830161215d565b9160ff600860078301549201541661200360405194859485526080602086015260808501906121fd565b916040840152151560608301520390f35b346102ca575f3660031901126102ca5760206040517f68e79a7bf1e0bc45d0a330c573bc367f9cf464fd326078812f301165fbda4ef18152f35b346102ca5760203660031901126102ca576004359063ffffffff60e01b82168092036102ca57602091637965db0b60e01b8114908115612090575b5015158152f35b6301ffc9a760e01b14905083612089565b600435906001600160a01b03821682036102ca57565b602435906001600160a01b03821682036102ca57565b90600182811c921680156120fb575b60208310146120e757565b634e487b7160e01b5f52602260045260245ffd5b91607f16916120dc565b6101c081019081106001600160401b03821117610d5c57604052565b60a081019081106001600160401b03821117610d5c57604052565b90601f801991011681019081106001600160401b03821117610d5c57604052565b9060405191825f825492612170846120cd565b80845293600181169081156121db5750600114612197575b506121959250038361213c565b565b90505f9291925260205f20905f915b8183106121bf575050906020612195928201015f612188565b60209193508060019154838589010152019101909184926121a6565b90506020925061219594915060ff191682840152151560051b8201015f612188565b805180835260209291819084018484015e5f828201840152601f01601f1916010190565b9190602083019260038210156108ca5752565b6001600160401b038111610d5c57601f01601f191660200190565b60045481101561226b5760045f52600e60205f20910201905f90565b634e487b7160e01b5f52603260045260245ffd5b9060018060a01b0382511681526122a7602083015161012060208401526101208301906121fd565b916040810151604083015f905b600582106122d957505050608081606061010093015160e08501520151151591015290565b60208060019285518152019301910190916122b4565b156122f657565b606460405162461bcd60e51b815260206004820152602060248201527f45737461646f20696e76616c69646f2070617261206573746120616363696f6e6044820152fd5b60055481101561226b5760055f52600960205f20910201905f90565b818110612361575050565b5f8155600101612356565b61237681546120cd565b9081612380575050565b81601f5f9311600114612391575055565b818352602083206123ad91601f0160051c810190600101612356565b8082528160208120915555565b60085f918281556123cd6001820161236c565b82600782016123df8160028501612356565b550155565b3d1561240e573d906123f582612234565b91612403604051938461213c565b82523d5f602084013e565b606090565b81601f820112156102ca5780519061242a82612234565b92612438604051948561213c565b828452602083830101116102ca57815f9260208093018386015e8301015290565b519081151582036102ca57565b9190601f811161247557505050565b612195925f5260205f20906020601f840160051c8301931061249f575b601f0160051c0190612356565b9091508190612492565b60405191905f835b600582106124c75750505061219560a08361213c565b60016020819285548152019301910190916124b1565b90600581101561226b5760051b0190565b919082018092116105f157565b6001600160a01b03165f818152600660205260408120600801549092919060ff1615612574575f526006602052612537600260405f20016124a9565b5f905b60058210612546575050565b909261256c600191600361256361255d88876124dd565b5161224f565b500154906124ee565b93019061253a565b60405162461bcd60e51b815260206004820152601a60248201527f456c206a756761646f72206e6f207469656e652065717569706f0000000000006044820152606490fd5b919091828114612693576125cd83546120cd565b6001600160401b038111610d5c576125ef816125e984546120cd565b84612466565b5f93601f821160011461262d5761261e92939482915f926126225750508160011b915f199060031b1c19161790565b9055565b015490505f80611073565b601f198216905f5260205f2094835f5260205f20915f5b81811061267b57509583600195969710612663575b505050811b019055565b01545f1960f88460031b161c191690555f8080612659565b9192600180602092868b015481550194019201612644565b509050565b908082146126cb57908154905f915b600583106126b55750505050565b60018091940192835494818401550191926126a7565b5050565b906040516126dc81612121565b608060ff6008839560018060a01b0381541685526126fc6001820161215d565b602086015261270d600282016124a9565b6040860152600781015460608601520154161515910152565b60028054146127355760028055565b60405162461bcd60e51b815260206004820152601f60248201527f5265656e7472616e637947756172643a207265656e7472616e742063616c6c006044820152606490fd5b335f9081527fa6eef7e35abe7026729641147f7915573c7e97b47efa546f5f6e3230263bcb49602052604090205460ff16156127b257565b610753602061073360116127c53361290b565b6037846106c15f6129f1565b5f81815260016020908152604080832033845290915290205460ff16156127f55750565b60206107336011610753936037846106c161280f3361290b565b936129f1565b805f52600160205260405f2060018060a01b0383165f5260205260ff60405f20541661283f575050565b5f8181526001602090815260408083206001600160a01b0395909516808452949091528120805460ff19169055339291907ff6391f5c32d9c69d2a47ea670b442974b53935d1edc7fd64eb21e047a839171b9080a4565b5f546001600160a01b031633036128a957565b606460405162461bcd60e51b815260206004820152602060248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e65726044820152fd5b919082039182116105f157565b90815181101561226b570160200190565b612915602a612234565b90612923604051928361213c565b602a8252612931602a612234565b6020830190601f190136823782511561226b576030905381516001101561226b576078602183015360295b600181116129b0575061296c5790565b606460405162461bcd60e51b815260206004820152602060248201527f537472696e67733a20686578206c656e67746820696e73756666696369656e746044820152fd5b90600f8116601081101561226b576f181899199a1a9b1b9c1cb0b131b232b360811b901a6129de83856128fa565b5360041c9080156105f1575f190161295c565b6129fb6042612234565b90612a09604051928361213c565b60428252612a176042612234565b6020830190601f190136823782511561226b576030905381516001101561226b576078602183015360415b60018111612a52575061296c5790565b90600f8116601081101561226b576f181899199a1a9b1b9c1cb0b131b232b360811b901a612a8083856128fa565b5360041c9080156105f1575f1901612a4256fea264697066735822122096300036766029e1f9503b0444f650f899f38c7585894fde5a30e689ab42e40164736f6c634300081c0033",
-        "sourceMap": "435:11477:42:-:0;;;;;;;;;;-1:-1:-1;435:11477:42;;;;;;;-1:-1:-1;;;11872:31:42;;435:11477;;11872:31;;435:11477;;;;;;-1:-1:-1;;;435:11477:42;;;;11872:31;;;435:11477;;;-1:-1:-1;;;11783:38:42;;435:11477;;11783:38;;435:11477;;;;;;;;;;;11783:38;;;435:11477;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;;;:::i;:::-;1063:62:21;;:::i;:::-;-1:-1:-1;;;;;435:11477:42;2162:22:21;;435:11477:42;;;;;-1:-1:-1;;;;;;435:11477:42;;;;;;-1:-1:-1;;;;;435:11477:42;;2566:40:21;;435:11477:42;2566:40:21;435:11477:42;;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;;;;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;5486:7:19;435:11477:42;;;;:::i;:::-;5438:18:19;2642:4;5438:18;;-1:-1:-1;435:11477:42;4604:6:19;435:11477:42;;4604:6:19;435:11477:42;-1:-1:-1;435:11477:42;4604:22:19;435:11477:42;4504:129:19;;5438:18;2642:4;:::i;:::-;5486:7;:::i;:::-;435:11477:42;;;;;;;-1:-1:-1;;435:11477:42;;;;;;;;2454:46;435:11477;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;;;;;;;;;;;;;;;;;;;;;;719:10:32;435:11477:42;;;;;;;;;;;;;3931:23:19;3927:390;;435:11477:42;;7745:27;;435:11477;;;7844:19;;;:::i;:::-;7873:13;;435:11477;7873:13;;435:11477;;;;;7905:19;;;435:11477;;;;7949:15;;;435:11477;;;;7985:23;;;435:11477;;;;8037:16;;;435:11477;;;;;8075:22;;;435:11477;;;;;8125:36;:20;;;:36;;2336:9;;;;;;;435:11477;;;2336:9;;;;;8125:36;435:11477;8171:25;;;435:11477;;;;;8227:21;;;435:11477;;;;;8275:34;:19;;;:34;;2336:9;;;;;;;435:11477;;;2336:9;;;;;8275:34;435:11477;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;10738:40;;;435:11477;;;;;;;;;;;;;;;;;10788:31;;;:::i;:::-;435:11477;;;;;;;;;;;;;;;;;10829:37;;;:::i;:::-;435:11477;;;;;;;;;;;;;10876:33;;;:::i;:::-;435:11477;;7905:19;435:11477;;;;;;7905:19;435:11477;;;;;;;10919:41;;;:::i;:::-;435:11477;;;;;;;;;;;;;10970:34;;;:::i;:::-;435:11477;;11044:2;11018:28;;;11014:111;;435:11477;;;11134:41;;435:11477;;;;;;;;;;;;;11185:43;;;:::i;:::-;435:11477;;;;;;;;;;;;;;;;;;11238:39;435:11477;11238:39;8382:54;11238:39;;:::i;:::-;435:11477;;;;;;;;8382:54;435:11477;;;;;;;;;;;;;11134:41;435:11477;;;;;;;;;11134:41;;;11014:111;11076:38;;11062:52;;11103:2;-1:-1:-1;11103:2:42;;435:11477;;11076:38;435:11477;11062:52;;:::i;:::-;11014:111;;;;11076:38;435:11477;;11076:38;;10738:40;435:11477;;-1:-1:-1;10738:40:42;;435:11477;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;-1:-1:-1;;;435:11477:42;;;;;;;3927:390:19;435:11477:42;;4022:252:19;435:11477:42;2497:52:33;719:10:32;2497:52:33;:::i;:::-;435:11477:42;4214:38:19;;745:24:42;4214:38:19;:::i;:::-;435:11477:42;;4022:252:19;;;435:11477:42;4022:252:19;;;435:11477:42;;;;;;;;;;;;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;;;;;;;;;;4022:252:19;;435:11477:42;;4022:252:19;;;;;;:::i;:::-;435:11477:42;;-1:-1:-1;;;3970:336:19;;435:11477:42;;3970:336:19;;435:11477:42;;;;;;;;;:::i;:::-;3970:336:19;;;435:11477:42;;;;;;-1:-1:-1;;435:11477:42;;;;2642:4:19;;:::i;:::-;435:11477:42;3448:10;435:11477;;;;3448:10;435:11477;;;;;6162:24;3440:66;3448:21;;3440:66;:::i;:::-;2227:103:25;;:::i;:::-;6291:12:42;435:11477;;;;;6287:23;;;;;;-1:-1:-1;;;;;435:11477:42;;6576:21;;435:11477;;6644:21;6668:2;435:11477;;;;;;6668:2;435:11477;;;;;;;6674:3;435:11477;;;6705:40;;;;;;;;;:::i;:::-;;435:11477;;;;6822:34;435:11477;;;;;;6822:34;435:11477;6162:24;435:11477;;;6674:3;435:11477;;2336:9;;;435:11477;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;-1:-1:-1;;;435:11477:42;;;;;;;6312:3;6346:15;;;:::i;:::-;-1:-1:-1;435:11477:42;-1:-1:-1;;;;;435:11477:42;6398:30;435:11477;6398:30;:::i;:::-;6446:18;;;6442:107;;6312:3;;;435:11477;;6272:13;;6442:107;6484:18;;-1:-1:-1;6484:18:42;-1:-1:-1;435:11477:42;6442:107;;;435:11477;;;;;;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;-1:-1:-1;;;;;435:11477:42;;:::i;:::-;;;;2399:49;435:11477;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;;;:::i;:::-;;;;;;;;;;;3130:29:19;435:11477:42;;;;;;-1:-1:-1;435:11477:42;;;;;;-1:-1:-1;435:11477:42;;;;;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;;;;;-1:-1:-1;;;;;435:11477:42;;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;10164:10;435:11477;;10156:7;435:11477;;;10156:32;435:11477;;;10156:32;435:11477;;;;;10164:10;435:11477;;10156:7;435:11477;;;;;;;;:::i;:::-;;;;;;;;;;;;;;:::i;:::-;;;;;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;2642:4:19;;:::i;:::-;435:11477:42;3448:10;435:11477;;;;3448:10;435:11477;;;;;3440:66;3448:21;;3440:66;:::i;:::-;3448:10;435:11477;;-1:-1:-1;;;;435:11477:42;-1:-1:-1;;;435:11477:42;;;;;;;3796:36;;435:11477;;3796:36;;435:11477;;2336:9;435:11477;;3796:36;:::i;:::-;;;;435:11477;;;;;;;-1:-1:-1;;435:11477:42;;;;;;:::i;:::-;2642:4:19;;:::i;:::-;-1:-1:-1;;;;;435:11477:42;;;;;;;;;;;;;;;7669:23:19;7665:149;;435:11477:42;7665:149:19;-1:-1:-1;;;;;435:11477:42;;;;;;;;;;;2336:9;;-1:-1:-1;;2336:9:42;3130:6:19;2336:9:42;;;719:10:32;;435:11477:42;745:24;;7763:40:19;;435:11477:42;7763:40:19;435:11477:42;;;;;;;-1:-1:-1;;435:11477:42;;;;;;2158:52;435:11477;;;;;;;;;;;:::i;:::-;;;;;;-1:-1:-1;;435:11477:42;;;;1063:62:21;;:::i;:::-;435:11477:42;;;-1:-1:-1;;;;;;435:11477:42;;;;-1:-1:-1;;;;;435:11477:42;2566:40:21;435:11477:42;;2566:40:21;435:11477:42;;;;;;;-1:-1:-1;;435:11477:42;;;;10354:12;435:11477;-1:-1:-1;;;;;435:11477:42;;;;;;;;;;10354:12;435:11477;;;;:::i;:::-;;;;;;;;;10354:12;435:11477;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;10354:12;435:11477;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;2642:4:19;;:::i;:::-;435:11477:42;3448:10;435:11477;;;;3448:10;435:11477;;;;;3920:21;3440:66;3448:21;;3440:66;:::i;:::-;3448:10;435:11477;;-1:-1:-1;;;;435:11477:42;-1:-1:-1;;;435:11477:42;;;;;;;4005:36;;435:11477;;4005:36;;435:11477;;2336:9;435:11477;;4005:36;:::i;435:11477::-;;;;;;-1:-1:-1;;435:11477:42;;;;;;;;2217:40;;;;;;;;:::i;:::-;-1:-1:-1;435:11477:42;;2217:40;435:11477;2217:40;;;:::i;:::-;;;;;;;:::i;:::-;;;;435:11477;2217:40;435:11477;2217:40;;435:11477;2217:40;;;435:11477;2217:40;;;435:11477;2217:40;;;435:11477;2217:40;;;435:11477;2217:40;;;;435:11477;2217:40;;;;435:11477;;;2217:40;;;;435:11477;2217:40;;;;435:11477;2217:40;;;435:11477;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;;;-1:-1:-1;;;;;435:11477:42;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;3017:10;;;435:11477;;2999:17;435:11477;;;;;;;;;;;;;;3173:21;435:11477;3173:21;;;;3017:10;;;435:11477;;9084:7;435:11477;;;3305:14;435:11477;;;9084:32;435:11477;;;;;;9169:31;435:11477;;;9276:21;435:11477;9276:21;;;;435:11477;;;;;;;:::i;:::-;3017:10;435:11477;;;;9396:193;;;435:11477;;;;9396:193;;;435:11477;;;-1:-1:-1;9396:193:42;;;435:11477;;;;9396:193;;;435:11477;;;;;;9084:7;435:11477;;;;;;;;;;-1:-1:-1;;;;;;435:11477:42;-1:-1:-1;;;;;435:11477:42;;;;;;;;;;;9396:193;;435:11477;;;;-1:-1:-1;;;;;435:11477:42;;;;;;;;;;:::i;:::-;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3305:14;435:11477;;;;;2999:17;435:11477;;;;;;;;2336:9;;;;;;;435:11477;;;2336:9;;;;;435:11477;3017:10;435:11477;;9084:7;435:11477;;;;;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;3017:10;9652:61;;;;3017:10;9652:61;435:11477;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;435:11477:42;-1:-1:-1;;;;;435:11477:42;;;;;;;;;3305:14;;435:11477;;3305:14;;435:11477;;;;;;;;;:::i;:::-;;;;;;;;;:::i;:::-;2999:17;435:11477;;;2999:17;435:11477;;;;;;;;2336:9;;;;;;;435:11477;;;2336:9;;;;;435:11477;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;435:11477:42;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;9299:3;9333:13;;435:11477;9333:13;;;:::i;:::-;435:11477;;;3305:14;435:11477;;;;;2336:9;;;;;;;;;435:11477;9261:13;;435:11477;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;;;;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;;;;;;;;;3196:3;3223:13;;;;;:::i;:::-;435:11477;3223:32;435:11477;;;3320:13;;;;:::i;:::-;435:11477;;;3305:14;435:11477;;;;;;;;;;;;3158:13;;435:11477;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;2642:4:19;;:::i;:::-;4726:16:42;435:11477;;;-1:-1:-1;;;4726:33:42;;435:11477;4726:33;;435:11477;;;;;;-1:-1:-1;;;;;435:11477:42;4726:33;;;;;;;435:11477;4726:33;;;435:11477;;;;;;;;;;;4800:13;435:11477;4815:18;;;;;;435:11477;4835:3;4726:16;435:11477;;;-1:-1:-1;;;4887:29:42;;435:11477;4887:29;;435:11477;;;;;;;;4887:29;;435:11477;;-1:-1:-1;;;;;435:11477:42;4887:29;;;;;;;435:11477;4887:29;;;4835:3;435:11477;;;;4726:33;5044:8;;;5082;;;435:11477;;;;;;:::i;:::-;;;4726:33;4962:553;;435:11477;;;;4962:553;;435:11477;;;;4962:553;;;435:11477;;4962:553;;;435:11477;;4962:553;;;435:11477;;4962:553;;;435:11477;;;4962:553;;435:11477;;4962:553;;;435:11477;;4962:553;;;435:11477;;4962:553;;;435:11477;;4962:553;;;435:11477;;4962:553;;;435:11477;;4962:553;;;435:11477;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;435:11477:42;;;;;;;;;;:::i;:::-;4726:33;435:11477;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;435:11477:42;;;;;;;;;;;;:::i;:::-;;;;;:::i;:::-;4726:33;435:11477;;;;;;;;;;;;;;;;;;4962:553;435:11477;;;;;;;;;;;;;;;;;;;;;;;;;;;;4962:553;;;435:11477;4726:16;435:11477;;;4962:553;;;435:11477;;;;;4962:553;;;435:11477;;;;;4962:553;;;435:11477;;;;;;4962:553;;435:11477;;;;;4962:553;;;435:11477;;;;;4962:553;;;435:11477;;;;;;4962:553;;;435:11477;;;;;;2336:9;;;;;;;435:11477;;;2336:9;;;;;435:11477;4962:553;;;435:11477;;;;;4962:553;;;435:11477;;;;;4962:553;435:11477;;;;;2336:9;;;;;;;435:11477;;;2336:9;;;;;435:11477;;4800:13;;435:11477;;;;-1:-1:-1;435:11477:42;;;;;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;;;;;;;;;4962:553;435:11477;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4726:16;435:11477;;;;;;;;;;;;;;;4726:33;435:11477;;;;;;;;;;;;;;;;;;;;-1:-1:-1;435:11477:42;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4726:16;435:11477;;;;;;;;;;;;;;;4726:33;435:11477;;;;;;;;;;;;;;;;4887:29;;;;;435:11477;4887:29;;;;;;:::i;:::-;;;435:11477;4726:33;435:11477;;;;;;;;;-1:-1:-1;;;;;435:11477:42;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;4726:33;435:11477;;;-1:-1:-1;;;;;435:11477:42;;;;;;;;;;:::i;:::-;4726:33;435:11477;;;;;;;;-1:-1:-1;;;;;435:11477:42;;;;;4962:553;435:11477;;;;;;:::i;:::-;;;;;4962:553;435:11477;;;4962:553;435:11477;;;4962:553;435:11477;;;4962:553;435:11477;;;4962:553;435:11477;;;4962:553;435:11477;;;4962:553;435:11477;;;4962:553;435:11477;;;;;;;;;;;4962:553;435:11477;;;4962:553;435:11477;;;4962:553;435:11477;;;4962:553;435:11477;;;;4962:553;435:11477;;;:::i;:::-;4962:553;435:11477;;;4962:553;435:11477;;;4962:553;435:11477;;;4962:553;435:11477;;;4962:553;435:11477;;;;;:::i;:::-;4962:553;435:11477;;;4887:29;;;;435:11477;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;:::i;:::-;;4726:16;435:11477;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4726:33;;;;;;;;;;;;;;;;;:::i;:::-;;;435:11477;;;;;4726:33;;;;;;-1:-1:-1;4726:33:42;;435:11477;;;;;;-1:-1:-1;;435:11477:42;;;;2642:4:19;;:::i;:::-;2227:103:25;;:::i;:::-;6968:21:42;6992:2;435:11477;;;;;;6992:2;435:11477;;;;;;;6998:3;435:11477;;;7037:10;;;;;7029:43;;;;:::i;:::-;;435:11477;;;;;;;;7138:34;435:11477;7037:10;7138:34;;1716:1:25;2809:22;435:11477:42;;;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;-1:-1:-1;;;435:11477:42;;;;6998:3;;435:11477;;;;;;;-1:-1:-1;;435:11477:42;;;;;;:::i;:::-;719:10:32;-1:-1:-1;;;;;435:11477:42;;6133:23:19;435:11477:42;;6237:7:19;435:11477:42;;;6237:7:19;:::i;435:11477:42:-;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;;;;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;;;;;:::i;:::-;5012:18:19;2642:4;5012:18;;-1:-1:-1;435:11477:42;4604:6:19;435:11477:42;;4604:6:19;435:11477:42;-1:-1:-1;435:11477:42;4604:22:19;435:11477:42;4504:129:19;;2642:4;435:11477:42;;;3130:6:19;435:11477:42;;;;;;;;;;;;-1:-1:-1;435:11477:42;;;;;-1:-1:-1;435:11477:42;;;7669:23:19;7665:149;;435:11477:42;7665:149:19;435:11477:42;;;;3130:6:19;435:11477:42;;;;;;;;-1:-1:-1;;;;;435:11477:42;;;;;;;;;;;;;2336:9;;-1:-1:-1;;2336:9:42;;;;;;719:10:32;;435:11477:42;;7763:40:19;;435:11477:42;7763:40:19;435:11477:42;;;;;;;-1:-1:-1;;435:11477:42;;;;2642:4:19;;:::i;:::-;435:11477:42;3448:10;435:11477;;;;3448:10;435:11477;;;;;5814:24;3440:66;3448:21;;3440:66;:::i;:::-;435:11477;5895:3;5874:12;435:11477;5870:23;;;;;5929:15;;435:11477;5929:15;;:::i;:::-;435:11477;;;;;;;;;5981:30;;;:::i;:::-;435:11477;;;6025:7;435:11477;;6025:30;435:11477;;;6025:30;435:11477;;5855:13;;435:11477;;;;;;-1:-1:-1;;435:11477:42;;;;2642:4:19;;:::i;:::-;435:11477:42;3448:10;435:11477;;;;3448:10;435:11477;;;;;4125:24;3440:66;3448:21;;3440:66;:::i;:::-;435:11477;4206:3;4185:12;435:11477;4181:23;;;;;4240:15;;435:11477;4240:15;;:::i;:::-;435:11477;;;;;;;;;;;4232:7;435:11477;;4225:37;435:11477;;;4225:37;:::i;:::-;4294:15;;;:::i;:::-;435:11477;;;;;;;;;;;4276:17;435:11477;;;;;2336:9;;;;;;;435:11477;4166:13;;4181:23;4185:12;435:11477;;4185:12;435:11477;;;;4161:174;4378:13;435:11477;4415:3;435:11477;;4393:20;;;;;435:11477;;;;4434:14;435:11477;;;;;2336:9;;-1:-1:-1;;2336:9:42;;;435:11477;;4378:13;;4393:20;3448:10;435:11477;;-1:-1:-1;;;;435:11477:42;;;;;4566:36;;4532:19;-1:-1:-1;;4532:19:42;435:11477;4566:36;435:11477;3448:10;435:11477;;;;4566:36;;:::i;435:11477::-;;;;;;;;;;;4185:12;435:11477;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;;;;;-1:-1:-1;435:11477:42;4604:6:19;435:11477:42;;4604:6:19;435:11477:42;-1:-1:-1;435:11477:42;4604:22:19;435:11477:42;4504:129:19;;435:11477:42;;;;;;-1:-1:-1;;435:11477:42;;;;2112:40;435:11477;;;-1:-1:-1;;;;;435:11477:42;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;2227:103:25;;:::i;:::-;2336:9:42;8656;:22;2336:9;;8747:10;435:11477;;8729:17;435:11477;;;;;;;;2336:9;;8747:10;435:11477;;8729:17;435:11477;;;;;8836:4;2336:9;;;;;;;;8747:10;8855:25;435:11477;8855:25;;8836:4;2809:22:25;435:11477:42;;2336:9;435:11477;;-1:-1:-1;;;2336:9:42;;435:11477;;2336:9;;;;;;;435:11477;2336:9;435:11477;;;2336:9;;;;;435:11477;;-1:-1:-1;;;2336:9:42;;;435:11477;2336:9;;;;;;;435:11477;2336:9;435:11477;;;2336:9;;;;435:11477;;;;;;-1:-1:-1;;435:11477:42;;;;-1:-1:-1;;;;;435:11477:42;;:::i;:::-;;;;;;2352:41;435:11477;;;;;;;-1:-1:-1;;;;;435:11477:42;2352:41;435:11477;2352:41;;;:::i;:::-;;435:11477;2352:41;;;;435:11477;2352:41;;435:11477;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;435:11477:42;;;;;;;745:24;435:11477;;;;;;;;;-1:-1:-1;;435:11477:42;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;2840:47:19;;;:87;;;;435:11477:42;;;;;;;2840:87:19;-1:-1:-1;;;937:40:34;;-1:-1:-1;2840:87:19;;;435:11477:42;;;;-1:-1:-1;;;;;435:11477:42;;;;;;:::o;:::-;;;;-1:-1:-1;;;;;435:11477:42;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;435:11477:42;;;;;;;:::o;:::-;;;;;;;-1:-1:-1;;;;;435:11477:42;;;;;;;:::o;:::-;;;;;;;;;;;;;-1:-1:-1;;;;;435:11477:42;;;;;;;:::o;:::-;;;;;;-1:-1:-1;435:11477:42;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;:::o;:::-;;;-1:-1:-1;435:11477:42;;;;;-1:-1:-1;435:11477:42;;-1:-1:-1;435:11477:42;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2336:9;;435:11477;2336:9;;435:11477;2336:9;;;;;435:11477;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;435:11477:42;;;;;;;;-1:-1:-1;;435:11477:42;;;;:::o;:::-;;;;;;;;;;;;;;:::o;:::-;-1:-1:-1;;;;;435:11477:42;;;;;;-1:-1:-1;;435:11477:42;;;;:::o;:::-;;;;;;;;;-1:-1:-1;435:11477:42;;;-1:-1:-1;435:11477:42;;;;;-1:-1:-1;435:11477:42;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;2336:9;;;435:11477;;;;;;;;;;;;;;;;;;;4185:12;435:11477;;;;;;4185:12;-1:-1:-1;435:11477:42;;;-1:-1:-1;435:11477:42;;;;;-1:-1:-1;435:11477:42;:::o;:::-;;;;;;;;:::o;:::-;;;;;;;;;;;;;:::i;:::-;;;;;;;:::o;:::-;;;-1:-1:-1;435:11477:42;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;:::o;:::-;;-1:-1:-1;435:11477:42;;;;;;;;;:::i;:::-;;;;;;;;;;;:::i;:::-;;;;:::o;:::-;;;;;;;;;;:::i;:::-;;;;;;;;:::i;:::-;;;;-1:-1:-1;435:11477:42;;;;:::o;:::-;;;:::o;:::-;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;:::i;:::-;;;;;;;;;;;;;-1:-1:-1;435:11477:42;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;:::o;:::-;;;;;;;;;;;:::o;:::-;;;-1:-1:-1;435:11477:42;;-1:-1:-1;435:11477:42;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;-1:-1:-1;435:11477:42;;;;;;;;;-1:-1:-1;435:11477:42;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;:::o;9726:347::-;-1:-1:-1;;;;;435:11477:42;;;;;9832:7;435:11477;;;;;9832:30;;435:11477;;;9726:347;435:11477;;;;;;;;9832:7;435:11477;;;9927:27;435:11477;;;9927:27;435:11477;:::i;:::-;;9964:103;9984:14;435:11477;9984:14;;;;9726:347;;:::o;10000:3::-;10038:6;;10019:37;435:11477;10038:6;10028:28;:17;10038:6;;;;:::i;:::-;435:11477;10028:17;:::i;:::-;:28;;435:11477;10019:37;;:::i;:::-;10000:3;435:11477;9969:13;;;435:11477;;;-1:-1:-1;;;435:11477:42;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;;;;;435:11477:42;;;;;;;;;;:::i;:::-;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;-1:-1:-1;435:11477:42;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::o;2336:287:25:-;2468:7;435:11477:42;;2468:19:25;1759:1;;2468:7;435:11477:42;;2336:287:25:o;1759:1::-;435:11477:42;;-1:-1:-1;;;1759:1:25;;;;;;;;;;;435:11477:42;1759:1:25;435:11477:42;;;1759:1:25;;;;3460:103:19;719:10:32;435:11477:42;;;;;;;;;;;;;3931:23:19;3927:390;;3460:103::o;3927:390::-;435:11477:42;;4022:252:19;435:11477:42;2497:52:33;719:10:32;2497:52:33;:::i;:::-;435:11477:42;4214:38:19;;435:11477:42;4214:38:19;:::i;3460:103::-;-1:-1:-1;435:11477:42;;;3130:6:19;435:11477:42;;;;;;;;719:10:32;435:11477:42;;;;;;;;;;3931:23:19;3927:390;;3460:103;:::o;3927:390::-;435:11477:42;4022:252:19;435:11477:42;;719:10:32;435:11477:42;719:10:32;4214:38:19;2497:52:33;719:10:32;2497:52:33;:::i;:::-;4214:38:19;;:::i;7991:234::-;435:11477:42;-1:-1:-1;435:11477:42;3130:6:19;435:11477:42;;;-1:-1:-1;435:11477:42;;;;;;;;-1:-1:-1;435:11477:42;;;;;-1:-1:-1;435:11477:42;;;8070:149:19;;7991:234;;:::o;8070:149::-;-1:-1:-1;435:11477:42;;;3130:6:19;435:11477:42;;;;;;;;-1:-1:-1;;;;;435:11477:42;;;;;;;;;;;;;2336:9;;-1:-1:-1;;2336:9:42;;;719:10:32;;435:11477:42;;8168:40:19;;-1:-1:-1;8168:40:19;7991:234::o;1359:130:21:-;1273:6;435:11477:42;-1:-1:-1;;;;;435:11477:42;719:10:32;1422:23:21;435:11477:42;;1359:130:21:o;435:11477:42:-;;;;2336:9;;;435:11477;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;:::o;1818:437:33:-;435:11477:42;;;:::i;:::-;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;-1:-1:-1;;435:11477:42;;;;;;;;;1975:15:33;;;435:11477:42;;;;;;;2000:15:33;435:11477:42;;;2000:15:33;435:11477:42;2058:5:33;435:11477:42;2058:5:33;;;;2170:10;278:18;;1818:437;:::o;278:18::-;;435:11477:42;;2336:9;;;278:18:33;;435:11477:42;2141:1:33;278:18;;;435:11477:42;278:18:33;;;435:11477:42;278:18:33;435:11477:42;;;278:18:33;;2065:3;2105:11;2113:3;2105:11;;2096:21;;;;;;-1:-1:-1;;;2096:21:33;;2084:33;;;;:::i;:::-;;2141:1;435:11477:42;2065:3:33;435:11477:42;;;;-1:-1:-1;;435:11477:42;2030:26:33;;1818:437;435:11477:42;;;:::i;:::-;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;-1:-1:-1;;435:11477:42;;;;;;;;;1975:15:33;;;435:11477:42;;;;;;;2000:15:33;435:11477:42;;;2000:15:33;435:11477:42;2058:5:33;435:11477:42;2058:5:33;;;;2170:10;278:18;;1818:437;:::o;2065:3::-;2105:11;2113:3;2105:11;;2096:21;;;;;;-1:-1:-1;;;2096:21:33;;2084:33;;;;:::i;:::-;;2141:1;435:11477:42;2065:3:33;435:11477:42;;;;-1:-1:-1;;435:11477:42;2030:26:33;",
-        "linkReferences": {}
-    },
-    "methodIdentifiers": {
-        "DEFAULT_ADMIN_ROLE()": "a217fddf",
-        "ORACLE_ROLE()": "07e2cea5",
-        "UsuariosInscritos(address)": "9fc3c274",
-        "actualizarEstadisticas(uint256,uint256,uint256,uint256,uint256,uint256,uint256,bool,uint256,uint256,bool)": "c8532fd0",
-        "actualizarPuntuacionesDeTodos()": "2c59d0ce",
-        "calcularPuntuacionEquipo(address)": "446da54f",
-        "cargarJugadoresDisponibles()": "4068dbf9",
-        "distribuirPremio()": "aa0fa25a",
-        "equipos(address)": "0acaeff0",
-        "fantasyPlayerNFT()": "145f4825",
-        "finalizarJornada()": "4c7ef287",
-        "gameStatus()": "722fed7e",
-        "getEquipo()": "7f1f73b4",
-        "getEquiposInscritos()": "4ceebd56",
-        "getEstadoActual()": "1f05d184",
-        "getRoleAdmin(bytes32)": "248a9ca3",
-        "grantRole(bytes32,address)": "2f2ff15d",
-        "hasRole(bytes32,address)": "91d14854",
-        "iniciarJornada()": "7e68e3ec",
-        "jugadorElegido(uint256)": "d4225f6a",
-        "jugadores(uint256)": "4aead46c",
-        "owner()": "8da5cb5b",
-        "pagarEntrada()": "141998dd",
-        "renounceOwnership()": "715018a6",
-        "renounceRole(bytes32,address)": "36568abe",
-        "resetJornada()": "2726021d",
-        "revokeRole(bytes32,address)": "d547741f",
-        "seleccionarJugadores(string,uint256[5])": "48f65eaa",
-        "setOracle(address)": "7adbf973",
-        "supportsInterface(bytes4)": "01ffc9a7",
-        "transferOwnership(address)": "f2fde38b",
-        "withdraw()": "3ccfd60b"
-    },
-    "rawMetadata": "{\"compiler\":{\"version\":\"0.8.28+commit.7893614a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_fantasyPlayerNFT\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"usuario\",\"type\":\"address\"}],\"name\":\"EntradaPagada\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"jugadorId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nuevaPuntuacion\",\"type\":\"uint256\"}],\"name\":\"EstadisticasActualizadas\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"enum FantasyLeague.Status\",\"name\":\"nuevoEstado\",\"type\":\"uint8\"}],\"name\":\"EstadoJornadaActualizado\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"JornadaReiniciada\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"usuario\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"nombreEquipo\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256[5]\",\"name\":\"jugadores\",\"type\":\"uint256[5]\"}],\"name\":\"JugadoresSeleccionados\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"ganador\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"cantidad\",\"type\":\"uint256\"}],\"name\":\"PremioDistribuido\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"admin\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"cantidad\",\"type\":\"uint256\"}],\"name\":\"RetiroDeFondos\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ORACLE_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"UsuariosInscritos\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_goles\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_asistencias\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_paradas\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_penaltisParados\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_despejes\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_minutosJugados\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_porteriaCero\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"_tarjetasAmarillas\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_tarjetasRojas\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_ganoPartido\",\"type\":\"bool\"}],\"name\":\"actualizarEstadisticas\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"actualizarPuntuacionesDeTodos\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_jugador\",\"type\":\"address\"}],\"name\":\"calcularPuntuacionEquipo\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"total\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"cargarJugadoresDisponibles\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"distribuirPremio\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"equipos\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"nombre\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"puntuacionEquipo\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"seleccionado\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"fantasyPlayerNFT\",\"outputs\":[{\"internalType\":\"contract FantasyPlayerNFT\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"finalizarJornada\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"gameStatus\",\"outputs\":[{\"internalType\":\"enum FantasyLeague.Status\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getEquipo\",\"outputs\":[{\"components\":[{\"internalType\":\"address payable\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"nombre\",\"type\":\"string\"},{\"internalType\":\"uint256[5]\",\"name\":\"jugadores\",\"type\":\"uint256[5]\"},{\"internalType\":\"uint256\",\"name\":\"puntuacionEquipo\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"seleccionado\",\"type\":\"bool\"}],\"internalType\":\"struct FantasyLeague.Equipo\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getEquiposInscritos\",\"outputs\":[{\"components\":[{\"internalType\":\"address payable\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"nombre\",\"type\":\"string\"},{\"internalType\":\"uint256[5]\",\"name\":\"jugadores\",\"type\":\"uint256[5]\"},{\"internalType\":\"uint256\",\"name\":\"puntuacionEquipo\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"seleccionado\",\"type\":\"bool\"}],\"internalType\":\"struct FantasyLeague.Equipo[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getEstadoActual\",\"outputs\":[{\"internalType\":\"enum FantasyLeague.Status\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"iniciarJornada\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"jugadorElegido\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"jugadores\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"nombre\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"equipo\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"puntuacion\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"goles\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"asistencias\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"paradas\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"penaltisParados\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"despejes\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"minutosJugados\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"porteriaCero\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"tarjetasAmarillas\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tarjetasRojas\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"ganoPartido\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pagarEntrada\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"resetJornada\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_nombreEquipo\",\"type\":\"string\"},{\"internalType\":\"uint256[5]\",\"name\":\"_jugadores\",\"type\":\"uint256[5]\"}],\"name\":\"seleccionarJugadores\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"oracle\",\"type\":\"address\"}],\"name\":\"setOracle\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"events\":{\"RoleAdminChanged(bytes32,bytes32,bytes32)\":{\"details\":\"Emitted when `newAdminRole` is set as ``role``'s admin role, replacing `previousAdminRole` `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite {RoleAdminChanged} not being emitted signaling this. _Available since v3.1._\"},\"RoleGranted(bytes32,address,address)\":{\"details\":\"Emitted when `account` is granted `role`. `sender` is the account that originated the contract call, an admin role bearer except when using {AccessControl-_setupRole}.\"},\"RoleRevoked(bytes32,address,address)\":{\"details\":\"Emitted when `account` is revoked `role`. `sender` is the account that originated the contract call:   - if using `revokeRole`, it is the admin role bearer   - if using `renounceRole`, it is the role bearer (i.e. `account`)\"}},\"kind\":\"dev\",\"methods\":{\"getRoleAdmin(bytes32)\":{\"details\":\"Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}.\"},\"grantRole(bytes32,address)\":{\"details\":\"Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleGranted} event.\"},\"hasRole(bytes32,address)\":{\"details\":\"Returns `true` if `account` has been granted `role`.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner.\"},\"renounceRole(bytes32,address)\":{\"details\":\"Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`. May emit a {RoleRevoked} event.\"},\"revokeRole(bytes32,address)\":{\"details\":\"Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleRevoked} event.\"},\"supportsInterface(bytes4)\":{\"details\":\"See {IERC165-supportsInterface}.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"title\":\"FantasyLeague\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"setOracle(address)\":{\"notice\":\"Concede ORACLE_ROLE a `oracle`\"}},\"notice\":\"Gestiona la liga fantasy, equipos y reparto de premios\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/FantasyLeague.sol\":\"FantasyLeague\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink/=lib/chainlink/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":foundry-devops/=lib/foundry-devops/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"],\"viaIR\":true},\"sources\":{\"lib/openzeppelin-contracts/contracts/access/AccessControl.sol\":{\"keccak256\":\"0x0dd6e52cb394d7f5abe5dca2d4908a6be40417914720932de757de34a99ab87f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dc117ce50ea746cab6b97ed1a1facee17a715ae0cb95d67b943dacbaf15176fb\",\"dweb:/ipfs/QmYRZ2UGNYwsHwfNu7Wjr8L2j1LBZ1mKv6NvbwgterYMXc\"]},\"lib/openzeppelin-contracts/contracts/access/IAccessControl.sol\":{\"keccak256\":\"0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a\",\"dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh\"]},\"lib/openzeppelin-contracts/contracts/access/Ownable.sol\":{\"keccak256\":\"0xba43b97fba0d32eb4254f6a5a297b39a19a247082a02d6e69349e071e2946218\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fc980984badf3984b6303b377711220e067722bbd6a135b24669ff5069ef9f32\",\"dweb:/ipfs/QmPHXMSXj99XjSVM21YsY6aNtLLjLVXDbyN76J5HQYvvrz\"]},\"lib/openzeppelin-contracts/contracts/interfaces/IERC165.sol\":{\"keccak256\":\"0xd04b0f06e0666f29cf7cccc82894de541e19bb30a765b107b1e40bb7fe5f7d7a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7b652499d098e88d8d878374616bb58434301061cae2253298b3f374044e0ddb\",\"dweb:/ipfs/QmbhAzctqo5jrSKU6idHdVyqfmzCcDbNUPvmx4GiXxfA6q\"]},\"lib/openzeppelin-contracts/contracts/interfaces/IERC4906.sol\":{\"keccak256\":\"0x2a9dadb806be80dd451821f1f1190eb9aa6f6edae85b185db29d60767cc0c5f4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5c25cac8dbe5bd96320053d23c3dacdb875e629d7c53ac00892eb7aa8500bde6\",\"dweb:/ipfs/Qmaf2oqbxxdJA9DphAoH4UCb8aXEAVM8fnu6qMxHJ5ta4A\"]},\"lib/openzeppelin-contracts/contracts/interfaces/IERC721.sol\":{\"keccak256\":\"0xaf297d12d8d4a57fe01a70f0ef38908f208e3faedc577056d0b728fa2f3ccf0c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fbfaf37123958822a2720a4ea29651be00edab787540b770f73d3e025d286ff8\",\"dweb:/ipfs/QmbzgWeTm8hJVUqWrNAwFjshqbYVyeGpQA8D1huzxQdmw6\"]},\"lib/openzeppelin-contracts/contracts/security/ReentrancyGuard.sol\":{\"keccak256\":\"0xa535a5df777d44e945dd24aa43a11e44b024140fc340ad0dfe42acf4002aade1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://41319e7f621f2dc3733511332c4fd032f8e32ad2aa7fd6f665c19741d9941a34\",\"dweb:/ipfs/QmcYR3bd862GD1Bc7jwrU9bGxrhUu5na1oP964bDCu2id1\"]},\"lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol\":{\"keccak256\":\"0x2c309e7df9e05e6ce15bedfe74f3c61b467fc37e0fae9eab496acf5ea0bbd7ff\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7063b5c98711a98018ba4635ac74cee1c1cfa2ea01099498e062699ed9530005\",\"dweb:/ipfs/QmeJ8rGXkcv7RrqLdAW8PCXPAykxVsddfYY6g5NaTwmRFE\"]},\"lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x5bce51e11f7d194b79ea59fe00c9e8de9fa2c5530124960f29a24d4c740a3266\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7e66dfde185df46104c11bc89d08fa0760737aa59a2b8546a656473d810a8ea4\",\"dweb:/ipfs/QmXvyqtXPaPss2PD7eqPoSao5Szm2n6UMoiG8TZZDjmChR\"]},\"lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0xa82b58eca1ee256be466e536706850163d2ec7821945abd6b4778cfb3bee37da\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6e75cf83beb757b8855791088546b8337e9d4684e169400c20d44a515353b708\",\"dweb:/ipfs/QmYvPafLfoquiDMEj7CKHtvbgHu7TJNPSVPSCjrtjV8HjV\"]},\"lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721URIStorage.sol\":{\"keccak256\":\"0x7942989e3525aec1672469e4c65fb33fbd19c785c9cadbcb70fcbe1fe8bfdd37\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6c9f260258c2be0e3b75f8ca285872c4bfa3a8fc97fdc2e62366c78abf22b54f\",\"dweb:/ipfs/QmTg1DMNwCDj8NVi6i1noqx7cxuRdPP4VyW4fzDkKAKmH2\"]},\"lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol\":{\"keccak256\":\"0x75b829ff2f26c14355d1cba20e16fe7b29ca58eb5fef665ede48bc0f9c6c74b9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a0a107160525724f9e1bbbab031defc2f298296dd9e331f16a6f7130cec32146\",\"dweb:/ipfs/QmemujxSd7gX8A9M8UwmNbz4Ms3U9FG9QfudUgxwvTmPWf\"]},\"lib/openzeppelin-contracts/contracts/utils/Address.sol\":{\"keccak256\":\"0x006dd67219697fe68d7fbfdea512e7c4cb64a43565ed86171d67e844982da6fa\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2455248c8ddd9cc6a7af76a13973cddf222072427e7b0e2a7d1aff345145e931\",\"dweb:/ipfs/QmfYjnjRbWqYpuxurqveE6HtzsY1Xx323J428AKQgtBJZm\"]},\"lib/openzeppelin-contracts/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]},\"lib/openzeppelin-contracts/contracts/utils/Strings.sol\":{\"keccak256\":\"0x3088eb2868e8d13d89d16670b5f8612c4ab9ff8956272837d8e90106c59c14a0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b81d9ff6559ea5c47fc573e17ece6d9ba5d6839e213e6ebc3b4c5c8fe4199d7f\",\"dweb:/ipfs/QmPCW1bFisUzJkyjroY3yipwfism9RRCigCcK1hbXtVM8n\"]},\"lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol\":{\"keccak256\":\"0xd10975de010d89fd1c78dc5e8a9a7e7f496198085c151648f20cba166b32582b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fb0048dee081f6fffa5f74afc3fb328483c2a30504e94a0ddd2a5114d731ec4d\",\"dweb:/ipfs/QmZptt1nmYoA5SgjwnSgWqgUSDgm4q52Yos3xhnMv3MV43\"]},\"lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"lib/openzeppelin-contracts/contracts/utils/math/Math.sol\":{\"keccak256\":\"0xe4455ac1eb7fc497bb7402579e7b4d64d928b846fce7d2b6fde06d366f21c2b3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cc8841b3cd48ad125e2f46323c8bad3aa0e88e399ec62acb9e57efa7e7c8058c\",\"dweb:/ipfs/QmSqE4mXHA2BXW58deDbXE8MTcsL5JSKNDbm23sVQxRLPS\"]},\"lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol\":{\"keccak256\":\"0xf92515413956f529d95977adc9b0567d583c6203fc31ab1c23824c35187e3ddc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c50fcc459e49a9858b6d8ad5f911295cb7c9ab57567845a250bf0153f84a95c7\",\"dweb:/ipfs/QmcEW85JRzvDkQggxiBBLVAasXWdkhEysqypj9EaB6H2g6\"]},\"src/FantasyLeague.sol\":{\"keccak256\":\"0xa32ab1acaaed79d702620d16e3ee655a410f6c9fbf664f391e6d0672e31299a3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://91ad154c50651e0ce67e6d1b54f9cac063d53c38f0d0f53e5892e924bef0d83e\",\"dweb:/ipfs/QmVwxZ64sCP6UjtiA1cY3rGG9kvKdPv2L7atySgGvuUj83\"]},\"src/FantasyPlayerNFT.sol\":{\"keccak256\":\"0x74b1c588a2ab0f6f78bb183c82c54df2dc945852bfb3e9804e6663df5d4eacd6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9ae8fc682f745a61eded225e9624aa70c7fab42d32abdb731d65f7674fa9717e\",\"dweb:/ipfs/QmbCvZRTG6JEucGKHyo5P79nBEnrXoG2dYDc1us1HMhSYm\"]},\"src/JugadorStruct.sol\":{\"keccak256\":\"0xb9e6f00607fc438686c8b1e90e2cd7ff98e4d1e7f739d24594e956f0fd8cc5ec\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://09fc8292cc4c5f944277673a5aac44d62f55567a11c37d9c1cf6e16fc905ab1d\",\"dweb:/ipfs/QmRaL5HyBpaLEMYsCCkVTWNvPiGtRRwBKDvcs2UgCs9GS5\"]}},\"version\":1}",
-    "metadata": {
-        "compiler": {
-            "version": "0.8.28+commit.7893614a"
-        },
-        "language": "Solidity",
-        "output": {
-            "abi": [
-                {
-                    "inputs": [
-                        {
-                            "internalType": "address",
-                            "name": "_fantasyPlayerNFT",
-                            "type": "address"
-                        }
-                    ],
-                    "stateMutability": "nonpayable",
-                    "type": "constructor"
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "address",
-                            "name": "usuario",
-                            "type": "address",
-                            "indexed": true
-                        }
-                    ],
-                    "type": "event",
-                    "name": "EntradaPagada",
-                    "anonymous": false
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "uint256",
-                            "name": "jugadorId",
-                            "type": "uint256",
-                            "indexed": true
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "nuevaPuntuacion",
-                            "type": "uint256",
-                            "indexed": false
-                        }
-                    ],
-                    "type": "event",
-                    "name": "EstadisticasActualizadas",
-                    "anonymous": false
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "enum FantasyLeague.Status",
-                            "name": "nuevoEstado",
-                            "type": "uint8",
-                            "indexed": false
-                        }
-                    ],
-                    "type": "event",
-                    "name": "EstadoJornadaActualizado",
-                    "anonymous": false
-                },
-                {
-                    "inputs": [],
-                    "type": "event",
-                    "name": "JornadaReiniciada",
-                    "anonymous": false
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "address",
-                            "name": "usuario",
-                            "type": "address",
-                            "indexed": true
-                        },
-                        {
-                            "internalType": "string",
-                            "name": "nombreEquipo",
-                            "type": "string",
-                            "indexed": false
-                        },
-                        {
-                            "internalType": "uint256[5]",
-                            "name": "jugadores",
-                            "type": "uint256[5]",
-                            "indexed": false
-                        }
-                    ],
-                    "type": "event",
-                    "name": "JugadoresSeleccionados",
-                    "anonymous": false
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "address",
-                            "name": "previousOwner",
-                            "type": "address",
-                            "indexed": true
-                        },
-                        {
-                            "internalType": "address",
-                            "name": "newOwner",
-                            "type": "address",
-                            "indexed": true
-                        }
-                    ],
-                    "type": "event",
-                    "name": "OwnershipTransferred",
-                    "anonymous": false
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "address",
-                            "name": "ganador",
-                            "type": "address",
-                            "indexed": true
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "cantidad",
-                            "type": "uint256",
-                            "indexed": false
-                        }
-                    ],
-                    "type": "event",
-                    "name": "PremioDistribuido",
-                    "anonymous": false
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "address",
-                            "name": "admin",
-                            "type": "address",
-                            "indexed": true
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "cantidad",
-                            "type": "uint256",
-                            "indexed": false
-                        }
-                    ],
-                    "type": "event",
-                    "name": "RetiroDeFondos",
-                    "anonymous": false
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "bytes32",
-                            "name": "role",
-                            "type": "bytes32",
-                            "indexed": true
-                        },
-                        {
-                            "internalType": "bytes32",
-                            "name": "previousAdminRole",
-                            "type": "bytes32",
-                            "indexed": true
-                        },
-                        {
-                            "internalType": "bytes32",
-                            "name": "newAdminRole",
-                            "type": "bytes32",
-                            "indexed": true
-                        }
-                    ],
-                    "type": "event",
-                    "name": "RoleAdminChanged",
-                    "anonymous": false
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "bytes32",
-                            "name": "role",
-                            "type": "bytes32",
-                            "indexed": true
-                        },
-                        {
-                            "internalType": "address",
-                            "name": "account",
-                            "type": "address",
-                            "indexed": true
-                        },
-                        {
-                            "internalType": "address",
-                            "name": "sender",
-                            "type": "address",
-                            "indexed": true
-                        }
-                    ],
-                    "type": "event",
-                    "name": "RoleGranted",
-                    "anonymous": false
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "bytes32",
-                            "name": "role",
-                            "type": "bytes32",
-                            "indexed": true
-                        },
-                        {
-                            "internalType": "address",
-                            "name": "account",
-                            "type": "address",
-                            "indexed": true
-                        },
-                        {
-                            "internalType": "address",
-                            "name": "sender",
-                            "type": "address",
-                            "indexed": true
-                        }
-                    ],
-                    "type": "event",
-                    "name": "RoleRevoked",
-                    "anonymous": false
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "payable",
-                    "type": "fallback"
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "view",
-                    "type": "function",
-                    "name": "DEFAULT_ADMIN_ROLE",
-                    "outputs": [
-                        {
-                            "internalType": "bytes32",
-                            "name": "",
-                            "type": "bytes32"
-                        }
-                    ]
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "view",
-                    "type": "function",
-                    "name": "ORACLE_ROLE",
-                    "outputs": [
-                        {
-                            "internalType": "bytes32",
-                            "name": "",
-                            "type": "bytes32"
-                        }
-                    ]
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "address",
-                            "name": "",
-                            "type": "address"
-                        }
-                    ],
-                    "stateMutability": "view",
-                    "type": "function",
-                    "name": "UsuariosInscritos",
-                    "outputs": [
-                        {
-                            "internalType": "bool",
-                            "name": "",
-                            "type": "bool"
-                        }
-                    ]
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "uint256",
-                            "name": "_tokenId",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "_goles",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "_asistencias",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "_paradas",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "_penaltisParados",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "_despejes",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "_minutosJugados",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "bool",
-                            "name": "_porteriaCero",
-                            "type": "bool"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "_tarjetasAmarillas",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "_tarjetasRojas",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "bool",
-                            "name": "_ganoPartido",
-                            "type": "bool"
-                        }
-                    ],
-                    "stateMutability": "nonpayable",
-                    "type": "function",
-                    "name": "actualizarEstadisticas"
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "nonpayable",
-                    "type": "function",
-                    "name": "actualizarPuntuacionesDeTodos"
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "address",
-                            "name": "_jugador",
-                            "type": "address"
-                        }
-                    ],
-                    "stateMutability": "view",
-                    "type": "function",
-                    "name": "calcularPuntuacionEquipo",
-                    "outputs": [
-                        {
-                            "internalType": "uint256",
-                            "name": "total",
-                            "type": "uint256"
-                        }
-                    ]
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "nonpayable",
-                    "type": "function",
-                    "name": "cargarJugadoresDisponibles"
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "nonpayable",
-                    "type": "function",
-                    "name": "distribuirPremio"
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "address",
-                            "name": "",
-                            "type": "address"
-                        }
-                    ],
-                    "stateMutability": "view",
-                    "type": "function",
-                    "name": "equipos",
-                    "outputs": [
-                        {
-                            "internalType": "address payable",
-                            "name": "owner",
-                            "type": "address"
-                        },
-                        {
-                            "internalType": "string",
-                            "name": "nombre",
-                            "type": "string"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "puntuacionEquipo",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "bool",
-                            "name": "seleccionado",
-                            "type": "bool"
-                        }
-                    ]
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "view",
-                    "type": "function",
-                    "name": "fantasyPlayerNFT",
-                    "outputs": [
-                        {
-                            "internalType": "contract FantasyPlayerNFT",
-                            "name": "",
-                            "type": "address"
-                        }
-                    ]
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "nonpayable",
-                    "type": "function",
-                    "name": "finalizarJornada"
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "view",
-                    "type": "function",
-                    "name": "gameStatus",
-                    "outputs": [
-                        {
-                            "internalType": "enum FantasyLeague.Status",
-                            "name": "",
-                            "type": "uint8"
-                        }
-                    ]
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "view",
-                    "type": "function",
-                    "name": "getEquipo",
-                    "outputs": [
-                        {
-                            "internalType": "struct FantasyLeague.Equipo",
-                            "name": "",
-                            "type": "tuple",
-                            "components": [
-                                {
-                                    "internalType": "address payable",
-                                    "name": "owner",
-                                    "type": "address"
-                                },
-                                {
-                                    "internalType": "string",
-                                    "name": "nombre",
-                                    "type": "string"
-                                },
-                                {
-                                    "internalType": "uint256[5]",
-                                    "name": "jugadores",
-                                    "type": "uint256[5]"
-                                },
-                                {
-                                    "internalType": "uint256",
-                                    "name": "puntuacionEquipo",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "internalType": "bool",
-                                    "name": "seleccionado",
-                                    "type": "bool"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "view",
-                    "type": "function",
-                    "name": "getEquiposInscritos",
-                    "outputs": [
-                        {
-                            "internalType": "struct FantasyLeague.Equipo[]",
-                            "name": "",
-                            "type": "tuple[]",
-                            "components": [
-                                {
-                                    "internalType": "address payable",
-                                    "name": "owner",
-                                    "type": "address"
-                                },
-                                {
-                                    "internalType": "string",
-                                    "name": "nombre",
-                                    "type": "string"
-                                },
-                                {
-                                    "internalType": "uint256[5]",
-                                    "name": "jugadores",
-                                    "type": "uint256[5]"
-                                },
-                                {
-                                    "internalType": "uint256",
-                                    "name": "puntuacionEquipo",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "internalType": "bool",
-                                    "name": "seleccionado",
-                                    "type": "bool"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "view",
-                    "type": "function",
-                    "name": "getEstadoActual",
-                    "outputs": [
-                        {
-                            "internalType": "enum FantasyLeague.Status",
-                            "name": "",
-                            "type": "uint8"
-                        }
-                    ]
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "bytes32",
-                            "name": "role",
-                            "type": "bytes32"
-                        }
-                    ],
-                    "stateMutability": "view",
-                    "type": "function",
-                    "name": "getRoleAdmin",
-                    "outputs": [
-                        {
-                            "internalType": "bytes32",
-                            "name": "",
-                            "type": "bytes32"
-                        }
-                    ]
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "bytes32",
-                            "name": "role",
-                            "type": "bytes32"
-                        },
-                        {
-                            "internalType": "address",
-                            "name": "account",
-                            "type": "address"
-                        }
-                    ],
-                    "stateMutability": "nonpayable",
-                    "type": "function",
-                    "name": "grantRole"
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "bytes32",
-                            "name": "role",
-                            "type": "bytes32"
-                        },
-                        {
-                            "internalType": "address",
-                            "name": "account",
-                            "type": "address"
-                        }
-                    ],
-                    "stateMutability": "view",
-                    "type": "function",
-                    "name": "hasRole",
-                    "outputs": [
-                        {
-                            "internalType": "bool",
-                            "name": "",
-                            "type": "bool"
-                        }
-                    ]
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "nonpayable",
-                    "type": "function",
-                    "name": "iniciarJornada"
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "uint256",
-                            "name": "",
-                            "type": "uint256"
-                        }
-                    ],
-                    "stateMutability": "view",
-                    "type": "function",
-                    "name": "jugadorElegido",
-                    "outputs": [
-                        {
-                            "internalType": "bool",
-                            "name": "",
-                            "type": "bool"
-                        }
-                    ]
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "uint256",
-                            "name": "",
-                            "type": "uint256"
-                        }
-                    ],
-                    "stateMutability": "view",
-                    "type": "function",
-                    "name": "jugadores",
-                    "outputs": [
-                        {
-                            "internalType": "uint256",
-                            "name": "id",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "string",
-                            "name": "nombre",
-                            "type": "string"
-                        },
-                        {
-                            "internalType": "string",
-                            "name": "equipo",
-                            "type": "string"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "puntuacion",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "goles",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "asistencias",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "paradas",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "penaltisParados",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "despejes",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "minutosJugados",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "bool",
-                            "name": "porteriaCero",
-                            "type": "bool"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "tarjetasAmarillas",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "tarjetasRojas",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "bool",
-                            "name": "ganoPartido",
-                            "type": "bool"
-                        }
-                    ]
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "view",
-                    "type": "function",
-                    "name": "owner",
-                    "outputs": [
-                        {
-                            "internalType": "address",
-                            "name": "",
-                            "type": "address"
-                        }
-                    ]
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "payable",
-                    "type": "function",
-                    "name": "pagarEntrada"
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "nonpayable",
-                    "type": "function",
-                    "name": "renounceOwnership"
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "bytes32",
-                            "name": "role",
-                            "type": "bytes32"
-                        },
-                        {
-                            "internalType": "address",
-                            "name": "account",
-                            "type": "address"
-                        }
-                    ],
-                    "stateMutability": "nonpayable",
-                    "type": "function",
-                    "name": "renounceRole"
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "nonpayable",
-                    "type": "function",
-                    "name": "resetJornada"
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "bytes32",
-                            "name": "role",
-                            "type": "bytes32"
-                        },
-                        {
-                            "internalType": "address",
-                            "name": "account",
-                            "type": "address"
-                        }
-                    ],
-                    "stateMutability": "nonpayable",
-                    "type": "function",
-                    "name": "revokeRole"
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "string",
-                            "name": "_nombreEquipo",
-                            "type": "string"
-                        },
-                        {
-                            "internalType": "uint256[5]",
-                            "name": "_jugadores",
-                            "type": "uint256[5]"
-                        }
-                    ],
-                    "stateMutability": "nonpayable",
-                    "type": "function",
-                    "name": "seleccionarJugadores"
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "address",
-                            "name": "oracle",
-                            "type": "address"
-                        }
-                    ],
-                    "stateMutability": "nonpayable",
-                    "type": "function",
-                    "name": "setOracle"
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "bytes4",
-                            "name": "interfaceId",
-                            "type": "bytes4"
-                        }
-                    ],
-                    "stateMutability": "view",
-                    "type": "function",
-                    "name": "supportsInterface",
-                    "outputs": [
-                        {
-                            "internalType": "bool",
-                            "name": "",
-                            "type": "bool"
-                        }
-                    ]
-                },
-                {
-                    "inputs": [
-                        {
-                            "internalType": "address",
-                            "name": "newOwner",
-                            "type": "address"
-                        }
-                    ],
-                    "stateMutability": "nonpayable",
-                    "type": "function",
-                    "name": "transferOwnership"
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "nonpayable",
-                    "type": "function",
-                    "name": "withdraw"
-                },
-                {
-                    "inputs": [],
-                    "stateMutability": "payable",
-                    "type": "receive"
-                }
-            ],
-            "devdoc": {
-                "kind": "dev",
-                "methods": {
-                    "getRoleAdmin(bytes32)": {
-                        "details": "Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}."
-                    },
-                    "grantRole(bytes32,address)": {
-                        "details": "Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleGranted} event."
-                    },
-                    "hasRole(bytes32,address)": {
-                        "details": "Returns `true` if `account` has been granted `role`."
-                    },
-                    "owner()": {
-                        "details": "Returns the address of the current owner."
-                    },
-                    "renounceOwnership()": {
-                        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
-                    },
-                    "renounceRole(bytes32,address)": {
-                        "details": "Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`. May emit a {RoleRevoked} event."
-                    },
-                    "revokeRole(bytes32,address)": {
-                        "details": "Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleRevoked} event."
-                    },
-                    "supportsInterface(bytes4)": {
-                        "details": "See {IERC165-supportsInterface}."
-                    },
-                    "transferOwnership(address)": {
-                        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
-                    }
-                },
-                "version": 1
-            },
-            "userdoc": {
-                "kind": "user",
-                "methods": {
-                    "setOracle(address)": {
-                        "notice": "Concede ORACLE_ROLE a `oracle`"
-                    }
-                },
-                "version": 1
+[
+    {
+        "type": "constructor",
+        "inputs": [
+            {
+                "name": "_fantasyPlayerNFT",
+                "type": "address",
+                "internalType": "address"
             }
-        },
-        "settings": {
-            "remappings": [
-                "@chainlink/=lib/chainlink/contracts/",
-                "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
-                "ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
-                "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
-                "forge-std/=lib/forge-std/src/",
-                "foundry-devops/=lib/foundry-devops/",
-                "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-                "openzeppelin/=lib/openzeppelin-contracts/contracts/"
-            ],
-            "optimizer": {
-                "enabled": true,
-                "runs": 200
-            },
-            "metadata": {
-                "bytecodeHash": "ipfs"
-            },
-            "compilationTarget": {
-                "src/FantasyLeague.sol": "FantasyLeague"
-            },
-            "evmVersion": "cancun",
-            "libraries": {},
-            "viaIR": true
-        },
-        "sources": {
-            "lib/openzeppelin-contracts/contracts/access/AccessControl.sol": {
-                "keccak256": "0x0dd6e52cb394d7f5abe5dca2d4908a6be40417914720932de757de34a99ab87f",
-                "urls": [
-                    "bzz-raw://dc117ce50ea746cab6b97ed1a1facee17a715ae0cb95d67b943dacbaf15176fb",
-                    "dweb:/ipfs/QmYRZ2UGNYwsHwfNu7Wjr8L2j1LBZ1mKv6NvbwgterYMXc"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/access/IAccessControl.sol": {
-                "keccak256": "0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57",
-                "urls": [
-                    "bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a",
-                    "dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
-                "keccak256": "0xba43b97fba0d32eb4254f6a5a297b39a19a247082a02d6e69349e071e2946218",
-                "urls": [
-                    "bzz-raw://fc980984badf3984b6303b377711220e067722bbd6a135b24669ff5069ef9f32",
-                    "dweb:/ipfs/QmPHXMSXj99XjSVM21YsY6aNtLLjLVXDbyN76J5HQYvvrz"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/interfaces/IERC165.sol": {
-                "keccak256": "0xd04b0f06e0666f29cf7cccc82894de541e19bb30a765b107b1e40bb7fe5f7d7a",
-                "urls": [
-                    "bzz-raw://7b652499d098e88d8d878374616bb58434301061cae2253298b3f374044e0ddb",
-                    "dweb:/ipfs/QmbhAzctqo5jrSKU6idHdVyqfmzCcDbNUPvmx4GiXxfA6q"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/interfaces/IERC4906.sol": {
-                "keccak256": "0x2a9dadb806be80dd451821f1f1190eb9aa6f6edae85b185db29d60767cc0c5f4",
-                "urls": [
-                    "bzz-raw://5c25cac8dbe5bd96320053d23c3dacdb875e629d7c53ac00892eb7aa8500bde6",
-                    "dweb:/ipfs/Qmaf2oqbxxdJA9DphAoH4UCb8aXEAVM8fnu6qMxHJ5ta4A"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/interfaces/IERC721.sol": {
-                "keccak256": "0xaf297d12d8d4a57fe01a70f0ef38908f208e3faedc577056d0b728fa2f3ccf0c",
-                "urls": [
-                    "bzz-raw://fbfaf37123958822a2720a4ea29651be00edab787540b770f73d3e025d286ff8",
-                    "dweb:/ipfs/QmbzgWeTm8hJVUqWrNAwFjshqbYVyeGpQA8D1huzxQdmw6"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/security/ReentrancyGuard.sol": {
-                "keccak256": "0xa535a5df777d44e945dd24aa43a11e44b024140fc340ad0dfe42acf4002aade1",
-                "urls": [
-                    "bzz-raw://41319e7f621f2dc3733511332c4fd032f8e32ad2aa7fd6f665c19741d9941a34",
-                    "dweb:/ipfs/QmcYR3bd862GD1Bc7jwrU9bGxrhUu5na1oP964bDCu2id1"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol": {
-                "keccak256": "0x2c309e7df9e05e6ce15bedfe74f3c61b467fc37e0fae9eab496acf5ea0bbd7ff",
-                "urls": [
-                    "bzz-raw://7063b5c98711a98018ba4635ac74cee1c1cfa2ea01099498e062699ed9530005",
-                    "dweb:/ipfs/QmeJ8rGXkcv7RrqLdAW8PCXPAykxVsddfYY6g5NaTwmRFE"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol": {
-                "keccak256": "0x5bce51e11f7d194b79ea59fe00c9e8de9fa2c5530124960f29a24d4c740a3266",
-                "urls": [
-                    "bzz-raw://7e66dfde185df46104c11bc89d08fa0760737aa59a2b8546a656473d810a8ea4",
-                    "dweb:/ipfs/QmXvyqtXPaPss2PD7eqPoSao5Szm2n6UMoiG8TZZDjmChR"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol": {
-                "keccak256": "0xa82b58eca1ee256be466e536706850163d2ec7821945abd6b4778cfb3bee37da",
-                "urls": [
-                    "bzz-raw://6e75cf83beb757b8855791088546b8337e9d4684e169400c20d44a515353b708",
-                    "dweb:/ipfs/QmYvPafLfoquiDMEj7CKHtvbgHu7TJNPSVPSCjrtjV8HjV"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721URIStorage.sol": {
-                "keccak256": "0x7942989e3525aec1672469e4c65fb33fbd19c785c9cadbcb70fcbe1fe8bfdd37",
-                "urls": [
-                    "bzz-raw://6c9f260258c2be0e3b75f8ca285872c4bfa3a8fc97fdc2e62366c78abf22b54f",
-                    "dweb:/ipfs/QmTg1DMNwCDj8NVi6i1noqx7cxuRdPP4VyW4fzDkKAKmH2"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
-                "keccak256": "0x75b829ff2f26c14355d1cba20e16fe7b29ca58eb5fef665ede48bc0f9c6c74b9",
-                "urls": [
-                    "bzz-raw://a0a107160525724f9e1bbbab031defc2f298296dd9e331f16a6f7130cec32146",
-                    "dweb:/ipfs/QmemujxSd7gX8A9M8UwmNbz4Ms3U9FG9QfudUgxwvTmPWf"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/utils/Address.sol": {
-                "keccak256": "0x006dd67219697fe68d7fbfdea512e7c4cb64a43565ed86171d67e844982da6fa",
-                "urls": [
-                    "bzz-raw://2455248c8ddd9cc6a7af76a13973cddf222072427e7b0e2a7d1aff345145e931",
-                    "dweb:/ipfs/QmfYjnjRbWqYpuxurqveE6HtzsY1Xx323J428AKQgtBJZm"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/utils/Context.sol": {
-                "keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
-                "urls": [
-                    "bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
-                    "dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/utils/Strings.sol": {
-                "keccak256": "0x3088eb2868e8d13d89d16670b5f8612c4ab9ff8956272837d8e90106c59c14a0",
-                "urls": [
-                    "bzz-raw://b81d9ff6559ea5c47fc573e17ece6d9ba5d6839e213e6ebc3b4c5c8fe4199d7f",
-                    "dweb:/ipfs/QmPCW1bFisUzJkyjroY3yipwfism9RRCigCcK1hbXtVM8n"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol": {
-                "keccak256": "0xd10975de010d89fd1c78dc5e8a9a7e7f496198085c151648f20cba166b32582b",
-                "urls": [
-                    "bzz-raw://fb0048dee081f6fffa5f74afc3fb328483c2a30504e94a0ddd2a5114d731ec4d",
-                    "dweb:/ipfs/QmZptt1nmYoA5SgjwnSgWqgUSDgm4q52Yos3xhnMv3MV43"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol": {
-                "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
-                "urls": [
-                    "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
-                    "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/utils/math/Math.sol": {
-                "keccak256": "0xe4455ac1eb7fc497bb7402579e7b4d64d928b846fce7d2b6fde06d366f21c2b3",
-                "urls": [
-                    "bzz-raw://cc8841b3cd48ad125e2f46323c8bad3aa0e88e399ec62acb9e57efa7e7c8058c",
-                    "dweb:/ipfs/QmSqE4mXHA2BXW58deDbXE8MTcsL5JSKNDbm23sVQxRLPS"
-                ],
-                "license": "MIT"
-            },
-            "lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol": {
-                "keccak256": "0xf92515413956f529d95977adc9b0567d583c6203fc31ab1c23824c35187e3ddc",
-                "urls": [
-                    "bzz-raw://c50fcc459e49a9858b6d8ad5f911295cb7c9ab57567845a250bf0153f84a95c7",
-                    "dweb:/ipfs/QmcEW85JRzvDkQggxiBBLVAasXWdkhEysqypj9EaB6H2g6"
-                ],
-                "license": "MIT"
-            },
-            "src/FantasyLeague.sol": {
-                "keccak256": "0xa32ab1acaaed79d702620d16e3ee655a410f6c9fbf664f391e6d0672e31299a3",
-                "urls": [
-                    "bzz-raw://91ad154c50651e0ce67e6d1b54f9cac063d53c38f0d0f53e5892e924bef0d83e",
-                    "dweb:/ipfs/QmVwxZ64sCP6UjtiA1cY3rGG9kvKdPv2L7atySgGvuUj83"
-                ],
-                "license": "MIT"
-            },
-            "src/FantasyPlayerNFT.sol": {
-                "keccak256": "0x74b1c588a2ab0f6f78bb183c82c54df2dc945852bfb3e9804e6663df5d4eacd6",
-                "urls": [
-                    "bzz-raw://9ae8fc682f745a61eded225e9624aa70c7fab42d32abdb731d65f7674fa9717e",
-                    "dweb:/ipfs/QmbCvZRTG6JEucGKHyo5P79nBEnrXoG2dYDc1us1HMhSYm"
-                ],
-                "license": "MIT"
-            },
-            "src/JugadorStruct.sol": {
-                "keccak256": "0xb9e6f00607fc438686c8b1e90e2cd7ff98e4d1e7f739d24594e956f0fd8cc5ec",
-                "urls": [
-                    "bzz-raw://09fc8292cc4c5f944277673a5aac44d62f55567a11c37d9c1cf6e16fc905ab1d",
-                    "dweb:/ipfs/QmRaL5HyBpaLEMYsCCkVTWNvPiGtRRwBKDvcs2UgCs9GS5"
-                ],
-                "license": "MIT"
-            }
-        },
-        "version": 1
+        ],
+        "stateMutability": "nonpayable"
     },
-    "id": 42
-}
+    {
+        "type": "fallback",
+        "stateMutability": "payable"
+    },
+    {
+        "type": "receive",
+        "stateMutability": "payable"
+    },
+    {
+        "type": "function",
+        "name": "DEFAULT_ADMIN_ROLE",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bytes32",
+                "internalType": "bytes32"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "ORACLE_ROLE",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bytes32",
+                "internalType": "bytes32"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "UsuariosInscritos",
+        "inputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "actualizarEstadisticas",
+        "inputs": [
+            {
+                "name": "_tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_goles",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_asistencias",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_paradas",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_penaltisParados",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_despejes",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_minutosJugados",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_porteriaCero",
+                "type": "bool",
+                "internalType": "bool"
+            },
+            {
+                "name": "_tarjetasAmarillas",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_tarjetasRojas",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_ganoPartido",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "actualizarPuntuacionesDeTodos",
+        "inputs": [],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "actualizarStatsBatchPacked32",
+        "inputs": [
+            {
+                "name": "ids",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "datos",
+                "type": "uint32[]",
+                "internalType": "uint32[]"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "actualizarStatsPacked32",
+        "inputs": [
+            {
+                "name": "_tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "data",
+                "type": "uint32",
+                "internalType": "uint32"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "calcularPuntuacionEquipo",
+        "inputs": [
+            {
+                "name": "_jugador",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "total",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "cargarJugadoresDisponibles",
+        "inputs": [],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "distribuirPremio",
+        "inputs": [],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "equipos",
+        "inputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "owner",
+                "type": "address",
+                "internalType": "address payable"
+            },
+            {
+                "name": "nombre",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "puntuacionEquipo",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "seleccionado",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "fantasyPlayerNFT",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "contract FantasyPlayerNFT"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "finalizarJornada",
+        "inputs": [],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "gameStatus",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint8",
+                "internalType": "enum FantasyLeague.Status"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "getEquipo",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "tuple",
+                "internalType": "struct FantasyLeague.Equipo",
+                "components": [
+                    {
+                        "name": "owner",
+                        "type": "address",
+                        "internalType": "address payable"
+                    },
+                    {
+                        "name": "nombre",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "jugadores",
+                        "type": "uint256[5]",
+                        "internalType": "uint256[5]"
+                    },
+                    {
+                        "name": "puntuacionEquipo",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "seleccionado",
+                        "type": "bool",
+                        "internalType": "bool"
+                    }
+                ]
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "getEquiposInscritos",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "tuple[]",
+                "internalType": "struct FantasyLeague.Equipo[]",
+                "components": [
+                    {
+                        "name": "owner",
+                        "type": "address",
+                        "internalType": "address payable"
+                    },
+                    {
+                        "name": "nombre",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "jugadores",
+                        "type": "uint256[5]",
+                        "internalType": "uint256[5]"
+                    },
+                    {
+                        "name": "puntuacionEquipo",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "seleccionado",
+                        "type": "bool",
+                        "internalType": "bool"
+                    }
+                ]
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "getEstadoActual",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint8",
+                "internalType": "enum FantasyLeague.Status"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "getRoleAdmin",
+        "inputs": [
+            {
+                "name": "role",
+                "type": "bytes32",
+                "internalType": "bytes32"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bytes32",
+                "internalType": "bytes32"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "grantRole",
+        "inputs": [
+            {
+                "name": "role",
+                "type": "bytes32",
+                "internalType": "bytes32"
+            },
+            {
+                "name": "account",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "hasRole",
+        "inputs": [
+            {
+                "name": "role",
+                "type": "bytes32",
+                "internalType": "bytes32"
+            },
+            {
+                "name": "account",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "iniciarJornada",
+        "inputs": [],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "jugadorElegido",
+        "inputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "jugadores",
+        "inputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "id",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "nombre",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "equipo",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "puntuacion",
+                "type": "uint16",
+                "internalType": "uint16"
+            },
+            {
+                "name": "goles",
+                "type": "uint8",
+                "internalType": "uint8"
+            },
+            {
+                "name": "asistencias",
+                "type": "uint8",
+                "internalType": "uint8"
+            },
+            {
+                "name": "paradas",
+                "type": "uint8",
+                "internalType": "uint8"
+            },
+            {
+                "name": "penaltisParados",
+                "type": "uint8",
+                "internalType": "uint8"
+            },
+            {
+                "name": "despejes",
+                "type": "uint8",
+                "internalType": "uint8"
+            },
+            {
+                "name": "minutosJugados",
+                "type": "uint8",
+                "internalType": "uint8"
+            },
+            {
+                "name": "porteriaCero",
+                "type": "bool",
+                "internalType": "bool"
+            },
+            {
+                "name": "tarjetasAmarillas",
+                "type": "uint8",
+                "internalType": "uint8"
+            },
+            {
+                "name": "tarjetasRojas",
+                "type": "uint8",
+                "internalType": "uint8"
+            },
+            {
+                "name": "ganoPartido",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "owner",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "pagarEntrada",
+        "inputs": [],
+        "outputs": [],
+        "stateMutability": "payable"
+    },
+    {
+        "type": "function",
+        "name": "renounceOwnership",
+        "inputs": [],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "renounceRole",
+        "inputs": [
+            {
+                "name": "role",
+                "type": "bytes32",
+                "internalType": "bytes32"
+            },
+            {
+                "name": "account",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "resetJornada",
+        "inputs": [],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "revokeRole",
+        "inputs": [
+            {
+                "name": "role",
+                "type": "bytes32",
+                "internalType": "bytes32"
+            },
+            {
+                "name": "account",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "seleccionarJugadores",
+        "inputs": [
+            {
+                "name": "_nombreEquipo",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "_jugadores",
+                "type": "uint256[5]",
+                "internalType": "uint256[5]"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "setOracle",
+        "inputs": [
+            {
+                "name": "oracle",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "supportsInterface",
+        "inputs": [
+            {
+                "name": "interfaceId",
+                "type": "bytes4",
+                "internalType": "bytes4"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "transferOwnership",
+        "inputs": [
+            {
+                "name": "newOwner",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "withdraw",
+        "inputs": [],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "event",
+        "name": "EntradaPagada",
+        "inputs": [
+            {
+                "name": "usuario",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "EstadisticasActualizadas",
+        "inputs": [
+            {
+                "name": "jugadorId",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "nuevaPuntuacion",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "EstadoJornadaActualizado",
+        "inputs": [
+            {
+                "name": "nuevoEstado",
+                "type": "uint8",
+                "indexed": false,
+                "internalType": "enum FantasyLeague.Status"
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "JornadaReiniciada",
+        "inputs": [],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "JugadoresSeleccionados",
+        "inputs": [
+            {
+                "name": "usuario",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "nombreEquipo",
+                "type": "string",
+                "indexed": false,
+                "internalType": "string"
+            },
+            {
+                "name": "jugadores",
+                "type": "uint256[5]",
+                "indexed": false,
+                "internalType": "uint256[5]"
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "OwnershipTransferred",
+        "inputs": [
+            {
+                "name": "previousOwner",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "newOwner",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "PremioDistribuido",
+        "inputs": [
+            {
+                "name": "ganador",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "cantidad",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "RetiroDeFondos",
+        "inputs": [
+            {
+                "name": "admin",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "cantidad",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "RoleAdminChanged",
+        "inputs": [
+            {
+                "name": "role",
+                "type": "bytes32",
+                "indexed": true,
+                "internalType": "bytes32"
+            },
+            {
+                "name": "previousAdminRole",
+                "type": "bytes32",
+                "indexed": true,
+                "internalType": "bytes32"
+            },
+            {
+                "name": "newAdminRole",
+                "type": "bytes32",
+                "indexed": true,
+                "internalType": "bytes32"
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "RoleGranted",
+        "inputs": [
+            {
+                "name": "role",
+                "type": "bytes32",
+                "indexed": true,
+                "internalType": "bytes32"
+            },
+            {
+                "name": "account",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "sender",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "RoleRevoked",
+        "inputs": [
+            {
+                "name": "role",
+                "type": "bytes32",
+                "indexed": true,
+                "internalType": "bytes32"
+            },
+            {
+                "name": "account",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "sender",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false
+    }
+]

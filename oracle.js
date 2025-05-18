@@ -1,5 +1,3 @@
-// oracle.js  — versión uint32
-
 import "dotenv/config";
 import Web3 from "web3";
 import fs from "fs";
@@ -17,7 +15,7 @@ const web3 = new Web3(env("RPC_URL"));
 const acct = web3.eth.accounts.privateKeyToAccount(env("ORACLE_PRIVATE_KEY"));
 web3.eth.accounts.wallet.add(acct);
 
-const league = new web3.eth.Contract(leagueAbi.abi, env("LEAGUE_ADDRESS"));
+const league = new web3.eth.Contract(leagueAbi, env("LEAGUE_ADDRESS"));
 
 // ── Parámetros ───────────────────────────────────────────
 const GAS_LIMIT = 120_000;           // cabe de sobra con uint32

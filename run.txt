@@ -1,0 +1,17 @@
+id 0  gas=60597  3301 ms
+id 1  gas=60650  11316 ms
+id 2  gas=60609  11409 ms
+id 3  gas=60609  11779 ms
+id 7  gas=60638  12134 ms
+id 13  gas=60597  12133 ms
+id 22  gas=60609  11309 ms
+id 34  gas=60650  12060 ms
+id 45  gas=60633  13088 ms
+id 52  gas=60609  10085 ms
+batch: 1:50.399 (m:ss.mmm)
+
+── Resumen ─────────│
+Jugadores procesados : 10
+Gas total            : 606201
+Gas medio / jugador  : 60620
+Latencia media (ms)  : 10861
